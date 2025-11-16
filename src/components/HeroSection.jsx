@@ -13,18 +13,18 @@ const HeroSection = () => {
                 transition={{ duration: 0.7 }}
                 >
                 <h1 className="text-5xl font-bold leading-tight text-gray-900 mb-6">
-                Buffer free car <br /> is our <span className="text-black">Pride</span>
+                    Buffer free car <br /> is our <span className="text-black">Pride</span>
                 </h1>
 
 
                 <p className="text-gray-500 leading-relaxed mb-6">
-                Lorem Ipsum Is Simply Dummy Text Of The Printing And Typesetting Industry.
-                Lorem Ipsum Is Simply Dummy Text Of The Printing And Typesetting Industry.
+                    Lorem Ipsum Is Simply Dummy Text Of The Printing And Typesetting Industry.
+                    Lorem Ipsum Is Simply Dummy Text Of The Printing And Typesetting Industry.
                 </p>
 
 
                 <button className="bg-blue-600 hover:bg-blue-700 transition text-white px-6 py-3 rounded-md flex items-center gap-2">
-                Explore Services <ArrowRight size={18} />
+                    Explore Services <ArrowRight size={18} />
                 </button>
 
 

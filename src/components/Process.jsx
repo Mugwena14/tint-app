@@ -1,0 +1,80 @@
+import React from 'react'
+import { motion } from "framer-motion";
+import { ArrowRight, Instagram, Twitter, Facebook, Menu } from "lucide-react";
+
+const Process = () => {
+
+    const steps = [
+        {
+        num: 1,
+        img: "/process1.jpg",
+        text: "Brush, Vacuum, And Clean The Interior.",
+        },
+        {
+        num: 2,
+        img: "/process2.jpg",
+        text: "Clean Wheels And Tires, Wash Exterior. Tire Dressing.",
+        },
+        {
+        num: 3,
+        img: "/process3.jpg",
+        text: "Polish Wheels, Clean & Treat Exterior Trim.",
+        },
+        {
+        num: 4,
+        img: "/process4.jpg",
+        text: "Polish And Then Wax Exterior Paints.",
+        },
+    ];
+
+
+return (
+    <section className="w-full py-20 bg-blue-900/90 text-white relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-6 text-center">
+            <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-3xl font-semibold mb-12"
+            >
+            Process
+            </motion.h2>
+
+
+            <div className="grid md:grid-cols-4 gap-10">
+            {steps.map((step, index) => (
+            <motion.div
+            key={index}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: index * 0.1 }}
+            viewport={{ once: true }}
+            className="relative rounded-xl overflow-hidden shadow-lg group"
+            >
+            {/* Large Step Number */}
+            <div className="absolute -top-6 -left-4 text-[110px] font-bold text-blue-500/30 z-10">
+            {step.num}
+            </div>
+
+
+            {/* Image */}
+            <img
+            src={step.img}
+            alt={step.text}
+            className="w-full h-52 object-cover group-hover:scale-105 transition duration-500"
+            />
+
+
+            {/* Text Overlay */}
+            <div className="absolute bottom-0 left-0 w-full bg-black/40 backdrop-blur-sm p-4 text-sm">
+            {step.text}
+            </div>
+            </motion.div>
+            ))}
+            </div>
+        </div>
+    </section>
+)}
+
+export default Process;
