@@ -10,7 +10,7 @@ return (
             </div>
 
 
-            <div className="hidden md:flex items-center gap-8 text-gray-700 font-medium">
+            <div className="hidden md:flex items-center gap-8 text-gray-700">
                 {[
                 "Home",
                 "Services",
