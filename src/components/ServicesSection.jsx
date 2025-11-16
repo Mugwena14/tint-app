@@ -1,84 +1,118 @@
-import React from 'react';
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 
 const ServicesSection = () => {
-
     const services = [
         {
             title: "Car Window Tinting",
+            image: "/images/car-tint.png",
             description:
-            "Enhance your vehicle’s appearance while reducing heat and glare for a cooler, more comfortable drive.",
+                "Enhance your vehicle’s appearance while reducing heat and glare for a cooler, more comfortable drive.",
         },
         {
             title: "Home Window Tinting",
+            image: "/images/window-tint.png",
             description:
-            "Improve privacy, reduce energy costs, and protect your interior from harmful UV rays.",
+                "Improve privacy, reduce energy costs, and protect your interior from harmful UV rays.",
         },
         {
             title: "Home Glass Tinting",
+            image: "/images/door-tint.png",
             description:
-            "Add style, privacy, and UV protection to your home or office doors with high-quality, long-lasting tint films.",
+                "Add style, privacy, and UV protection to your home or office doors with high-quality, long-lasting tint films.",
         },
     ];
 
-    return (
-        <section className="w-full py-20 relative">
-            <div className="max-w-7xl mx-auto px-6 relative ">
+    const [bgImage, setBgImage] = useState(services[0].image);
 
-                {/* MAIN 2-COLUMN LAYOUT */}
+    return (
+        <section className="w-full py-20 relative overflow-hidden">
+
+            {/* BACKGROUND IMAGE */}
+            <motion.div
+                key={bgImage}
+                initial={{ opacity: 0, scale: 1.05 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.9, ease: "easeOut" }}
+                style={{
+                    backgroundImage: `url(${bgImage})`,
+                }}
+                className="absolute inset-0 bg-cover bg-center"
+            />
+
+            {/* DARK OVERLAY */}
+            <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 0.55 }}
+                transition={{ duration: 0.8 }}
+                className="absolute inset-0 bg-black"
+            />
+
+            <div className="max-w-7xl mx-auto px-6 relative">
+
                 <div className="grid md:grid-cols-2 gap-16 relative">
 
-                    {/* LEFT SIDE */}
-                    <div className="relative">
+                    {/* LEFT SIDE TEXT */}
+                    <div className="relative text-white">
 
-                    {/* BACKGROUND LARGE TEXT */}
-                    <div className="relative">
-                        {/* SMALL VERTICAL LINE */}
-                        <div className="absolute left-18 top-4 h-[40px] w-[3px] bg-blue-800"></div>
+                        {/* BACKGROUND TEXT LAYER */}
+                        <div className="relative">
+                            <div className="absolute left-18 top-4 h-[40px] w-[3px] bg-blue-400"></div>
 
-                        {/* BACKGROUND H2 */}
-                        <motion.h2
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.6 }}
-                            viewport={{ once: true }}
-                            className="absolute ml-20 top-0 text-7xl font-semibold text-gray-200 pointer-events-none select-none"
-                        >
-                            Services
-                        </motion.h2>
+                            <motion.h2
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.6 }}
+                                viewport={{ once: true }}
+                                className="absolute ml-20 top-0 text-7xl font-semibold text-gray-300/30 pointer-events-none select-none"
+                            >
+                                Services
+                            </motion.h2>
 
-                        {/* FOREGROUND SMALL H2 */}
-                        <h2 className="absolute ml-20 left-0 top-[21px] ml-6 text-[23px] font-semibold text-gray-800">
-                            Services
-                        </h2>
+                            <h2 className="absolute ml-20 left-0 top-[21px] ml-6 text-[23px] font-semibold text-white">
+                                Services
+                            </h2>
+                        </div>
+
+                        <div className="mt-[80px]">
+                            <p className="text-gray-200 ml-18 leading-relaxed">
+                                High-quality window tinting designed to improve comfort, <br />
+                                privacy, and protection for your car or home, while <br />
+                                reducing heat and preserving interior materials.
+                            </p>
+                        </div>
                     </div>
 
-                    {/* PARAGRAPH */}
-                    <div className="mt-[80px]">
-                        <p className="text-gray-600 ml-18 leading-relaxed">
-                            High-quality window tinting designed to improve comfort, <br /> 
-                            privacy, and protection for your car or home, while <br />
-                            reducing heat and preserving interior materials..
-                        </p>
-                    </div>
-                    </div>
-
-                    {/* RIGHT SIDE — Horizontal Divs */}
+                    {/* RIGHT SIDE — GLASS CARDS */}
                     <div className="flex items-start space-x-6 -ml-32">
 
                         {services.map((service, index) => (
                             <motion.div
                                 key={index}
+                                onMouseEnter={() => setBgImage(service.image)}
+                                onMouseLeave={() => setBgImage(services[0].image)}
                                 initial={{ opacity: 0, y: 30 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.6, delay: index * 0.1 }}
                                 viewport={{ once: true }}
-                                className="bg-white p-6 rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition cursor-pointer w-[600px]"
+                                
+                                className="
+                                    bg-transparent
+                                    backdrop-blur-2xl
+                                    p-6
+                                    rounded-xl
+                                    border border-white/25
+                                    shadow-lg hover:shadow-2xl
+                                    transition
+                                    cursor-pointer
+                                    w-[600px]
+                                "
+                                whileHover={{ scale: 1.03 }}
                             >
-                                <h3 className="text-base font-semibold text-center text-gray-900 mb-3">
+                                <h3 className="text-base font-semibold text-center text-white mb-3">
                                     {service.title}
                                 </h3>
-                                <p className="text-gray-500 text-sm leading-relaxed">
+                                <p className="text-gray-200 text-sm leading-relaxed text-center">
                                     {service.description}
                                 </p>
                             </motion.div>
