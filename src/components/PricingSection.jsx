@@ -3,6 +3,8 @@ import { motion } from "framer-motion";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 
 const PricingSection = () => {
+    const phoneNumber = "27688287061"; // WhatsApp number (no +)
+
     const plans = [
         {
             name: "Car Tinting",
@@ -11,24 +13,28 @@ const PricingSection = () => {
                 "Affordable car tinting with transparent pricing based on vehicle type and tint level.",
         },
         {
-            name: "Window Tinting",
+            name: "Home Tinting",
             price: "From R500",
             description:
                 "Competitive pricing for residential and commercial window tinting, calculated per panel size.",
         },
         {
-            name: "Door Tinting",
+            name: "Office Tinting",
             price: "From R500",
             description:
                 "Cost-effective door tinting with rates depending on glass dimensions and chosen film grade.",
         },
     ];
 
+    const formatMessage = (serviceName) => {
+        return encodeURIComponent(`Hi! How much do ${serviceName} prices start at?`);
+    };
+
     return (
         <section className="w-full py-24 bg-white px-6 mx-20 md:px-12">
             <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16">
 
-                {/* ================= LEFT SIDE — HORIZONTAL CARDS ================= */}
+                {/* LEFT SIDE — HORIZONTAL CARDS */}
                 <div className="flex flex-row gap-6 items-start">
                     {plans.map((plan, i) => (
                         <motion.div
@@ -50,7 +56,7 @@ const PricingSection = () => {
                                 flex flex-col items-start
                             "
                         >
-                            {/* Combined name + price with ONE vertical blue bar */}
+                            {/* Combined name + price */}
                             <div className="flex items-start gap-2 mb-3">
                                 <span className="w-1 h-[38px] bg-blue-600 rounded block"></span>
 
@@ -68,17 +74,25 @@ const PricingSection = () => {
                                 {plan.description}
                             </p>
 
-                            <button className="w-full py-2 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-600 hover:text-white transition">
+                            {/* WHATSAPP BUTTON */}
+                            <a
+                                href={`https://wa.me/${phoneNumber}?text=${formatMessage(plan.name)}`}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="w-full py-2 border border-blue-600 text-blue-600 
+                                           rounded-lg hover:bg-blue-600 hover:text-white 
+                                           transition text-center"
+                            >
                                 More Info
-                            </button>
+                            </a>
                         </motion.div>
                     ))}
                 </div>
 
-                {/* ================= RIGHT SIDE ================= */}
+                {/* RIGHT SIDE */}
                 <div className="relative flex flex-col justify-center">
 
-                    {/* BLUE LINE FOR BOTH HEADINGS */}
+                    {/* BACKGROUND TITLE */}
                     <span className="absolute left-0 top-3 h-[45px] w-1 bg-blue-600 rounded"></span>
 
                     <h2

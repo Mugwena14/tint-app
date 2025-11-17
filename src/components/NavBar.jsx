@@ -27,9 +27,12 @@ return (
             </div>
 
 
-            <button className="hidden md:block text-sm bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition">
+            <a 
+                href="https://wa.me/27688287061"
+                target="_blank"
+                className="hidden md:block text-sm bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition">
                 Book Service Now
-            </button>
+            </a>
 
 
             <Menu className="md:hidden text-gray-700" />

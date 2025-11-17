@@ -6,6 +6,7 @@ import Process from './components/Process.jsx';
 import PricingSection from './components/PricingSection.jsx';
 import WhyChooseUs from './components/WhyChoose.jsx';
 import TeamReview from './components/TeamReview.jsx';
+import Footer from './components/Footer.jsx';
 
 function App() {
 return (
@@ -17,6 +18,7 @@ return (
     <PricingSection />
     <WhyChooseUs />
     <TeamReview />
+    <Footer />
 </div>
 );
 }

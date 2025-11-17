@@ -16,10 +16,10 @@ const ServicesSection = () => {
                 "Improve privacy, reduce energy costs, and protect your interior from harmful UV rays.",
         },
         {
-            title: "Home Glass Tinting",
+            title: "Office Glass Tinting",
             image: "/images/door-tint.png",
             description:
-                "Add style, privacy, and UV protection to your home or office doors with high-quality, long-lasting tint films.",
+                "Add style, privacy, and UV protection to your office doors with high-quality, long-lasting tint films.",
         },
     ];
 

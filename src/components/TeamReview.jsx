@@ -9,21 +9,21 @@ import { ChevronLeft, ChevronRight, Quote } from "lucide-react";
 const TeamReview = () => {
     const reviews = [
         {
-            text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-            name: "Phoebe Buffay",
-            title: "Phoebe Organizations Pvt. Ltd",
+            text: "Super impressed with the service! They arrived at my place on time, explained the tint options clearly, and the finish looks flawless. My car feels cooler already.",
+            name: "Thabo M.",
+            title: "Car Tinting Client",
             img: "/person1.jpg",
         },
         {
-            text: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. It has survived not only five centuries.",
-            name: "Ross Geller",
-            title: "Geller Leather Works",
+            text: "Professional and fast! I booked for home window tinting and the results were better than I expected. The heat inside my living room dropped immediately.",
+            name: "Anele R.",
+            title: "Home Tinting Client",
             img: "/person2.jpg",
         },
         {
-            text: "It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
-            name: "Rachel Green",
-            title: "Green Fashion Co.",
+            text: "Great experience from start to finish. They came to my office, worked efficiently, and the quality of the tint film is top-tier. Highly recommend their service.",
+            name: "Jaden K.",
+            title: "Office Tinting Client",
             img: "/person3.jpg",
         },
     ];
@@ -108,11 +108,11 @@ const TeamReview = () => {
                                 </p>
 
                                 <div className="flex items-center gap-4">
-                                    <img
+                                    {/* <img
                                         src={r.img}
                                         alt={r.name}
                                         className="w-14 h-14 rounded-full object-cover"
-                                    />
+                                    /> */}
                                     <div>
                                         <h4 className="font-semibold text-gray-900">{r.name}</h4>
                                         <p className="text-gray-500 text-sm">{r.title}</p>
