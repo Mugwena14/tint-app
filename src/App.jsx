@@ -3,6 +3,7 @@ import NavBar from './components/NavBar.jsx';
 import HeroSection from './components/HeroSection.jsx';
 import ServicesSection from './components/ServicesSection.jsx';
 import Process from './components/Process.jsx';
+import PricingSection from './components/PricingSection.jsx';
 
 function App() {
 return (
@@ -11,6 +12,7 @@ return (
   <HeroSection />
   <ServicesSection />
   <Process />
+  <PricingSection />
 </div>
 );
 }
