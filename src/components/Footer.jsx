@@ -8,12 +8,18 @@ const Footer = () => {
             <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-12 relative">
 
                 {/* LOGO + DESCRIPTION */}
-                <div>
-                    <img src="/images/logo.png" alt="Logo" className="w-20 mb-4" />
+                <div className="relative">
 
-                    <p className="text-sm leading-relaxed">
+                    {/* ONLY LOGO (used as background behind text) */}
+                    <img
+                        src="/images/tintish-logo.png"
+                        alt="Logo"
+                        className="absolute top-0 left-10 w-45 pointer-events-none select-none"
+                    />
+
+                    <p className="text-sm leading-relaxed relative z-10 mt-8 text-gray-500">
                         We deliver premium tinting and detailing services right at 
-                        your <bold>DOORSTEP,</bold> ensuring quality results with a smooth and 
+                        your <span className="font-bold">DOORSTEP,</span> ensuring quality results with a smooth and 
                         professional experience.
                     </p>
                 </div>
@@ -27,16 +33,11 @@ const Footer = () => {
                         Gauteng • Kempton Park<br />
                     </p>
 
-                    {/* CLICKABLE PHONE */}
-                    <p
-                        className="flex items-center gap-3 mb-3 text-sm ">
+                    <p className="flex items-center gap-3 mb-3 text-sm">
                         <Phone size={16} /> +27 688 287 061
                     </p>
 
-                    {/* CLICKABLE WHATSAPP */}
-                    <p 
-                        className="flex items-center gap-3 text-sm"
-                    >
+                    <p className="flex items-center gap-3 text-sm">
                         <FaWhatsapp size={18} /> Chat on WhatsApp
                     </p>
                 </div>
