@@ -24,8 +24,8 @@ const WhyChooseUs = () => {
     ];
 
     return (
-        <section className="w-full -mt-24 py-24 mb-0 bg-white">
-            <div className="max-w-7xl grid md:grid-cols-2 gap-0">
+        <section className="w-full -mt-24 py-24 bg-white">
+            <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-0">
 
                 {/* ================= LEFT SIDE ================= */}
                 <div className="relative bg-[#0f2629] text-white p-12 flex flex-col justify-center min-h-[650px]">
@@ -38,8 +38,8 @@ const WhyChooseUs = () => {
                         The numbers speak for themselves.
                     </p>
 
-                    {/* Circles positioned on right edge of LEFT div */}
-                    <div className="absolute right-0 top-1/2 -translate-y-1/2 flex flex-col gap-16 pr-0">
+                    {/* Circles */}
+                    <div className="absolute right-0 top-1/2 -translate-y-1/2 flex flex-col gap-16">
 
                         {stats.map((item, i) => (
                             <motion.div
@@ -48,7 +48,6 @@ const WhyChooseUs = () => {
                                 whileInView={{ opacity: 1, x: 0 }}
                                 transition={{ duration: 0.5, delay: i * 0.15 }}
                                 viewport={{ once: true }}
-                                className="relative"
                             >
                                 <div
                                     className="
@@ -56,7 +55,7 @@ const WhyChooseUs = () => {
                                         flex items-center justify-center
                                         text-white text-2xl font-bold
                                         shadow-2xl border-4 border-white
-                                        self-end translate-x-1/2
+                                        translate-x-1/2
                                     "
                                     style={{
                                         background:
@@ -76,7 +75,7 @@ const WhyChooseUs = () => {
                 </div>
 
                 {/* ================= RIGHT SIDE ================= */}
-                <div className="flex flex-col justify-center pl-20 md:pl-28 gap-20">
+                <div className="flex flex-col justify-center pl-20 md:pl-28 gap-24">
 
                     {stats.map((item, i) => (
                         <motion.div
