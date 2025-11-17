@@ -4,6 +4,7 @@ import HeroSection from './components/HeroSection.jsx';
 import ServicesSection from './components/ServicesSection.jsx';
 import Process from './components/Process.jsx';
 import PricingSection from './components/PricingSection.jsx';
+import WhyChooseUs from './components/WhyChoose.jsx';
 
 function App() {
 return (
@@ -13,6 +14,7 @@ return (
   <ServicesSection />
   <Process />
   <PricingSection />
+  <WhyChooseUs />
 </div>
 );
 }
