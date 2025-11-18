@@ -22,7 +22,6 @@ const NavBar = () => {
             "Services",
             "Process",
             "Pricing",
-            "Blog",
             "Testimonials",
             "Contact Us",
           ].map((link) => (
