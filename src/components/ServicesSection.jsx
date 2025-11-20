@@ -26,14 +26,14 @@ const ServicesSection = () => {
     const [bgImage, setBgImage] = useState(services[0].image);
 
     return (
-        <section className="w-full py-20 relative overflow-hidden">
+        <section className="w-full py-20 relative -mt-14 overflow-hidden">
 
             {/* BACKGROUND IMAGE */}
             <motion.div
                 key={bgImage}
                 initial={{ opacity: 0, scale: 1.05 }}
                 animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.9, ease: "easeOut" }}
+                transition={{ duration: 0.2, ease: "easeOut" }}
                 style={{
                     backgroundImage: `url(${bgImage})`,
                 }}
@@ -93,7 +93,7 @@ const ServicesSection = () => {
                                 onMouseLeave={() => setBgImage(services[0].image)}
                                 initial={{ opacity: 0, y: 30 }}
                                 whileInView={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.6, delay: index * 0.1 }}
+                                transition={{ duration: 0.6 }}
                                 viewport={{ once: true }}
                                 
                                 className="

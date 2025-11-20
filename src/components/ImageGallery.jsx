@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from "react";
+// Enhanced ImageGallery with fade transitions, animated arrows, mobile layout improvements, and swipe support
+// Paste-ready component
+
+import React, { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
 
 const ImageGallery = () => {
-  // ------------------------------
-  // CATEGORY IMAGES
-  // ------------------------------
   const categories = {
     cars: [
       "https://res.cloudinary.com/dkmzveqce/image/upload/v1763558761/1b27c0bd-0dd3-46ab-b1d6-10e9c725ae23_qehdet.jpg",
@@ -25,17 +25,17 @@ const ImageGallery = () => {
       "https://res.cloudinary.com/dkmzveqce/image/upload/v1763563679/59050003-a6b7-4e93-a8f9-e504f1f8ed0b_trbwut.jpg",
       "https://res.cloudinary.com/dkmzveqce/image/upload/v1763563653/c2892d5d-27e4-4c2c-9f8b-c8b7d2de1028_v1imvf.jpg",
       "https://res.cloudinary.com/dkmzveqce/image/upload/v1763563646/98b24657-6833-465b-8c68-c74ff5821b36_qii2fx.jpg",
-      "https://res.cloudinary.com/dkmzveqce/image/upload/v1763563653/c2892d5d-27e4-4c2c-9f8b-c8b7d2de1028_v1imvf.jpg",
+      "https://res.cloudinary.com/dkmzveqce/image/upload/v1763563653/c2892d5d-27e4-4c2c-9f8b-c8b7d2de1028_v1imvf.jpg"
     ],
     offices: [
       "https://res.cloudinary.com/dkmzveqce/image/upload/v1763562016/99269d91-e1b8-4e39-9868-a4173f394457_t0mb03.jpg",
       "https://res.cloudinary.com/dkmzveqce/image/upload/v1763561994/e538e3a8-1c63-46b7-9c04-2ca476d86629_dzcyyd.jpg",
       "https://res.cloudinary.com/dkmzveqce/image/upload/v1763561988/5cc2e3f0-d630-45fa-82a8-7f7acc1616dc_ak3rgn.jpg",
-      "https://res.cloudinary.com/dkmzveqce/image/upload/v1763561981/707f59ab-0bd3-45f0-85d8-e849b3e1cf35_csffuv.jpg",
+      "https://res.cloudinary.com/dkmzveqce/image/upload/v1763561981/707f59ab-0bd-45f0-85d8-e849b3e1cf35_csffuv.jpg",
       "https://res.cloudinary.com/dkmzveqce/image/upload/v1763561964/1bb8fc09-4d51-44d6-9792-3c60ad084728_nzxamm.jpg",
       "https://res.cloudinary.com/dkmzveqce/image/upload/v1763561961/d656f1cd-2b7b-4f67-bbfd-37146d24ec46_jtjjsm.jpg",
       "https://res.cloudinary.com/dkmzveqce/image/upload/v1763561960/5e731647-c47e-43e1-8b6d-19ffb0f9a077_z26yev.jpg",
-      "https://res.cloudinary.com/dkmzveqce/image/upload/v1763561956/9d11b141-24ef-4a87-a591-b857e438b109_l1wln0.jpg",
+      "https://res.cloudinary.com/dkmzveqce/image/upload/v1763561956/9d11b141-24ef-4a87-a591-b857e438b109_l1wln0.jpg"
     ],
   };
 
@@ -44,75 +44,101 @@ const ImageGallery = () => {
 
   const [selectedIndex, setSelectedIndex] = useState(null);
   const [showAll, setShowAll] = useState(false);
+  const containerRef = useRef(null);
+
+  // Swipe support
+  useEffect(() => {
+    const container = containerRef.current;
+    if (!container) return;
+
+    let startX = 0;
+    let endX = 0;
+
+    const touchStart = (e) => (startX = e.touches[0].clientX);
+    const touchEnd = (e) => {
+      endX = e.changedTouches[0].clientX;
+      const diff = startX - endX;
+
+      if (diff > 50 && selectedIndex !== null) showNext();
+      if (diff < -50 && selectedIndex !== null) showPrev();
+    };
+
+    container.addEventListener("touchstart", touchStart);
+    container.addEventListener("touchend", touchEnd);
+
+    return () => {
+      container.removeEventListener("touchstart", touchStart);
+      container.removeEventListener("touchend", touchEnd);
+    };
+  }, [selectedIndex]);
 
   const openImage = (index) => setSelectedIndex(index);
   const closeImage = () => setSelectedIndex(null);
 
-  const showPrev = (e) => {
-    e.stopPropagation();
+  const showPrev = () => {
     setSelectedIndex((i) => (i === 0 ? images.length - 1 : i - 1));
   };
 
-  const showNext = (e) => {
-    e.stopPropagation();
+  const showNext = () => {
     setSelectedIndex((i) => (i === images.length - 1 ? 0 : i + 1));
   };
-
-  // ✨ DISABLE SCROLL WHEN MODAL IS OPEN
-  useEffect(() => {
-    document.body.style.overflow = selectedIndex !== null ? "hidden" : "auto";
-    return () => (document.body.style.overflow = "auto");
-  }, [selectedIndex]);
 
   const displayedImages = showAll ? images : images.slice(0, 4);
 
   return (
     <div className="w-full flex justify-center mt-20 mb-10 relative">
-
-      {/* BACKGROUND TITLE */}
-      <h2 className="absolute -top-12 left-1/2 -translate-x-1/2 -translate-y-10 
-                     text-[70px] md:text-[120px] font-bold text-gray-200 
-                     select-none pointer-events-none tracking-tight">
+      <h2 className="absolute -top-2 left-1/2 -translate-x-1/2 -translate-y-10 text-[30px] md:text-[70px] font-bold text-gray-200 select-none pointer-events-none tracking-tight">
         Our Work
       </h2>
 
       <div className="max-w-5xl w-full px-6 relative z-10">
-
-        {/* SECTION TITLE */}
         <div className="text-center mb-10">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 relative inline-block">
+          <h2 className="text-2xl md:text-2xl font-bold text-gray-800 relative inline-block">
             Our Work
             <span className="block h-[3px] w-20 bg-blue-600 mt-1 mx-auto"></span>
           </h2>
         </div>
 
-        {/* CATEGORY TABS */}
-        <div className="flex justify-center gap-4 mb-8">
-          {["cars", "homes", "offices"].map((tab) => (
-            <button
-              key={tab}
-              onClick={() => {
-                setCategory(tab);
-                setShowAll(false); // reset view state
-              }}
-              className={`px-5 py-2 rounded-full text-md font-medium transition 
-                ${
+        {/* Category Tabs */}
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={category}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="flex justify-center gap-4 mb-8"
+          >
+            {Object.keys(categories).map((tab) => (
+              <button
+                key={tab}
+                onClick={() => setCategory(tab)}
+                className={`px-5 py-2 rounded-full text-md font-medium transition cursor-pointer ${
                   category === tab
                     ? "bg-blue-600 text-white"
                     : "bg-gray-200 text-gray-700 hover:bg-gray-300"
                 }`}
-            >
-              {tab.charAt(0).toUpperCase() + tab.slice(1)}
-            </button>
-          ))}
-        </div>
+              >
+                {tab.charAt(0).toUpperCase() + tab.slice(1)}
+              </button>
+            ))}
+          </motion.div>
+        </AnimatePresence>
 
-        {/* GRID */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-0 place-items-center">
+        {/* IMAGE GRID */}
+        <motion.div
+          key={category + showAll}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          className="grid grid-cols-2 md:grid-cols-4 gap-2 place-items-center"
+        >
           {displayedImages.map((img, index) => (
-            <div
+            <motion.div
               key={index}
-              className="aspect-square w-[180px] md:w-[250px] overflow-hidden cursor-pointer"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.3 }}
+              className="aspect-square w-[160px] md:w-[240px] overflow-hidden cursor-pointer rounded-lg"
               onClick={() => openImage(index)}
             >
               <motion.img
@@ -122,24 +148,33 @@ const ImageGallery = () => {
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.2 }}
               />
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
 
-        {/* ALWAYS SHOW VIEW MORE/LESS */}
-        <div className="text-center mt-6">
-          <button
+        {/* VIEW MORE */}
+        <motion.div
+          layout
+          transition={{ duration: 0.4 }}
+          className="text-center mt-6"
+        >
+          <motion.button
+            layout
+            whileTap={{ scale: 0.9 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.3 }}
             onClick={() => setShowAll(!showAll)}
-            className="px-5 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition"
+            className="px-5 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition cursor-pointer"
           >
             {showAll ? "View Less" : "View More"}
-          </button>
-        </div>
+          </motion.button>
+        </motion.div>
 
-        {/* FULLSCREEN MODAL */}
+        {/* MODAL */}
         <AnimatePresence>
           {selectedIndex !== null && (
             <motion.div
+              ref={containerRef}
               className="fixed inset-0 bg-black/80 flex items-center justify-center z-[9999]"
               onClick={closeImage}
               initial={{ opacity: 0 }}
@@ -156,7 +191,11 @@ const ImageGallery = () => {
               />
 
               {/* Close */}
-              <button
+              <motion.button
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -10 }}
+                transition={{ duration: 0.2 }}
                 className="absolute top-6 right-6 text-white"
                 onClick={(e) => {
                   e.stopPropagation();
@@ -164,21 +203,40 @@ const ImageGallery = () => {
                 }}
               >
                 <X size={32} />
-              </button>
+              </motion.button>
 
               {/* Prev */}
-              <button className="absolute left-6 text-white" onClick={showPrev}>
+              <motion.button
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: -20 }}
+                transition={{ duration: 0.2 }}
+                className="absolute left-6 text-white"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  showPrev();
+                }}
+              >
                 <ChevronLeft size={40} />
-              </button>
+              </motion.button>
 
               {/* Next */}
-              <button className="absolute right-6 text-white" onClick={showNext}>
+              <motion.button
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: 20 }}
+                transition={{ duration: 0.2 }}
+                className="absolute right-6 text-white"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  showNext();
+                }}
+              >
                 <ChevronRight size={40} />
-              </button>
+              </motion.button>
             </motion.div>
           )}
         </AnimatePresence>
-
       </div>
     </div>
   );
