@@ -8,23 +8,34 @@ const ImageGallery = () => {
   // ------------------------------
   const categories = {
     cars: [
-      "/images/apply.png",
-      "/images/background.jpeg",
-      "/images/apply.png",
-      "/images/background.jpeg",
-      "/images/apply.png",
-      "/images/apply.png",
+      "https://res.cloudinary.com/dkmzveqce/image/upload/v1763558761/1b27c0bd-0dd3-46ab-b1d6-10e9c725ae23_qehdet.jpg",
+      "https://res.cloudinary.com/dkmzveqce/image/upload/v1763558767/6f3ad420-6860-40dd-b18f-e832645e993c_kcana0.jpg",
+      "https://res.cloudinary.com/dkmzveqce/image/upload/v1763558757/276121a8-9a94-4574-bbb4-c99fee996cf0_tdlxrt.jpg",
+      "https://res.cloudinary.com/dkmzveqce/image/upload/v1763558744/3a452216-eed8-46ed-897a-194579110111_w0mcho.jpg",
+      "https://res.cloudinary.com/dkmzveqce/image/upload/v1763558706/6372b7da-8cf3-49a9-b9d1-6fc392ffeed8_iq5wjv.jpg",
+      "https://res.cloudinary.com/dkmzveqce/image/upload/v1763558699/c56770d2-cb6e-49a7-bc51-4b3f938c4cd1_vtsbgv.jpg",
+      "https://res.cloudinary.com/dkmzveqce/image/upload/v1763558895/7951de7f-39d5-495e-8c51-3d02d62aa29e_q1mrdr.jpg",
+      "https://res.cloudinary.com/dkmzveqce/image/upload/v1763558762/2888f523-e7a4-43d5-b1de-ee6024e41c5f_twnldd.jpg"
     ],
     homes: [
-      "/images/background.jpeg",
-      "/images/apply.png",
-      "/images/background.jpeg",
-      "/images/apply.png",
+      "https://res.cloudinary.com/dkmzveqce/image/upload/v1763563701/0161e555-104b-4715-bbfd-87e2712650d1_ff7odc.jpg",
+      "https://res.cloudinary.com/dkmzveqce/image/upload/v1763563656/a2ab6f29-015d-4bd1-a584-51320c16ca4b_hbolxm.jpg",
+      "https://res.cloudinary.com/dkmzveqce/image/upload/v1763563671/74bae268-b3e6-4072-803b-bf3968343a53_h2rxbi.jpg",
+      "https://res.cloudinary.com/dkmzveqce/image/upload/v1763563661/76e7eb7b-9668-4525-9595-c79bd4a3f5d6_unyp0n.jpg",
+      "https://res.cloudinary.com/dkmzveqce/image/upload/v1763563679/59050003-a6b7-4e93-a8f9-e504f1f8ed0b_trbwut.jpg",
+      "https://res.cloudinary.com/dkmzveqce/image/upload/v1763563653/c2892d5d-27e4-4c2c-9f8b-c8b7d2de1028_v1imvf.jpg",
+      "https://res.cloudinary.com/dkmzveqce/image/upload/v1763563646/98b24657-6833-465b-8c68-c74ff5821b36_qii2fx.jpg",
+      "https://res.cloudinary.com/dkmzveqce/image/upload/v1763563653/c2892d5d-27e4-4c2c-9f8b-c8b7d2de1028_v1imvf.jpg",
     ],
     offices: [
-      "/images/apply.png",
-      "/images/apply.png",
-      "/images/background.jpeg",
+      "https://res.cloudinary.com/dkmzveqce/image/upload/v1763562016/99269d91-e1b8-4e39-9868-a4173f394457_t0mb03.jpg",
+      "https://res.cloudinary.com/dkmzveqce/image/upload/v1763561994/e538e3a8-1c63-46b7-9c04-2ca476d86629_dzcyyd.jpg",
+      "https://res.cloudinary.com/dkmzveqce/image/upload/v1763561988/5cc2e3f0-d630-45fa-82a8-7f7acc1616dc_ak3rgn.jpg",
+      "https://res.cloudinary.com/dkmzveqce/image/upload/v1763561981/707f59ab-0bd3-45f0-85d8-e849b3e1cf35_csffuv.jpg",
+      "https://res.cloudinary.com/dkmzveqce/image/upload/v1763561964/1bb8fc09-4d51-44d6-9792-3c60ad084728_nzxamm.jpg",
+      "https://res.cloudinary.com/dkmzveqce/image/upload/v1763561961/d656f1cd-2b7b-4f67-bbfd-37146d24ec46_jtjjsm.jpg",
+      "https://res.cloudinary.com/dkmzveqce/image/upload/v1763561960/5e731647-c47e-43e1-8b6d-19ffb0f9a077_z26yev.jpg",
+      "https://res.cloudinary.com/dkmzveqce/image/upload/v1763561956/9d11b141-24ef-4a87-a591-b857e438b109_l1wln0.jpg",
     ],
   };
 
