@@ -5,23 +5,24 @@ const WhyChooseUs = () => {
     const stats = [
         {
             num: "1",
-            percent: "91%",
-            title: "Top-Quality Tinting",
-            desc: "We provide exceptional tinting services using premium-grade film designed for durability.",
+            percent: "94%",
+            title: "Trusted by Leading Brands",
+            desc: "From car dealerships to corporate fleets, top businesses rely on us for consistent, high-standard tinting work they can trust.",
         },
         {
             num: "2",
-            percent: "89%",
-            title: "Customer Satisfaction",
-            desc: "Most of our clients rate us above expectations thanks to our precision and service quality.",
+            percent: "92%",
+            title: "Exceptional Customer Satisfaction",
+            desc: "Clients consistently rate our service highly for workmanship, professionalism, and attention to detail.",
         },
         {
             num: "3",
-            percent: "83%",
-            title: "Repeat Clients",
-            desc: "A large portion of our customers return for additional vehicles or recommend us to others.",
+            percent: "87%",
+            title: "High Return & Referral Rate",
+            desc: "Most of our customers return with new vehicles and recommend us to friends, family, and colleagues.",
         },
     ];
+
 
     return (
         <section className="w-full -mt-24 py-24 bg-white">

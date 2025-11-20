@@ -3,7 +3,7 @@
 
 import React, { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { X, ChevronLeft, ChevronRight } from "lucide-react";
+import { X, ChevronLeft, ChevronRight, ArrowRight } from "lucide-react";
 
 const ImageGallery = () => {
   const categories = {
@@ -92,12 +92,28 @@ const ImageGallery = () => {
       </h2>
 
       <div className="max-w-5xl w-full px-6 relative z-10">
-        <div className="text-center mb-10">
+        <div className="text-center mb-4">
           <h2 className="text-2xl md:text-2xl font-bold text-gray-800 relative inline-block">
-            Our Work
-            <span className="block h-[3px] w-20 bg-blue-600 mt-1 mx-auto"></span>
+          Our Work
+          <span className="block h-[3px] w-20 bg-blue-600 mt-1 mx-auto"></span>
           </h2>
+
+
+          <p className="text-gray-500 text-sm md:text-[15px] max-w-md mx-auto mt-3">
+          A curated collection of our window tinting projects — showcasing premium
+          finishes across vehicles, homes and commercial spaces.{' '}
+          <a
+          href="https://www.tiktok.com/@yourtiktok"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-1 text-blue-600 hover:text-blue-700 font-medium transition"
+          >
+          Check out more of our work on TikTok
+          <ArrowRight size={16} />
+          </a>
+          </p>
         </div>
+        
 
         {/* Category Tabs */}
         <AnimatePresence mode="wait">

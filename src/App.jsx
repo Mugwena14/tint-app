@@ -20,7 +20,7 @@ return (
     <ImageGallery />
     <Process />
     <Loop />
-    <PricingSection />
+    {/* <PricingSection /> */}
     <WhyChooseUs />
     <TeamReview />
     <Footer />
