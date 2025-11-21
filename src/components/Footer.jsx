@@ -8,21 +8,25 @@ const Footer = () => {
             <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-12 relative">
 
                 {/* LOGO + DESCRIPTION */}
-                <div className="relative">
+                <div className="relative flex flex-col items-left">
 
-                    {/* ONLY LOGO (used as background behind text) */}
-                    <img
-                        src="/images/tintish-logo.png"
-                        alt="Logo"
-                        className="absolute top-0 left-10 w-45 pointer-events-none select-none"
-                    />
+                    {/* Logo + Title */}
+                    <div className="flex flex-col items-left mb-3">
+                        <img 
+                            src="https://res.cloudinary.com/dkmzveqce/image/upload/v1763680875/ChatGPT_Image_Nov_21_2025_01_18_38_AM_co1say.png" 
+                            alt="Tintish Logo"
+                            className="w-14 h-14 object-contain"
+                        />
+                    </div>
 
-                    <p className="text-sm leading-relaxed relative z-10 mt-8 text-gray-500">
-                        We deliver premium tinting and detailing services right at 
-                        your <span className="font-bold">DOORSTEP,</span> ensuring quality results with a smooth and 
-                        professional experience.
+                    {/* Description */}
+                    <p className="text-sm leading-relaxed text-white max-w-xs">
+                        We deliver premium tinting and detailing services right at your 
+                        <span className="font-bold"> DOORSTEP,</span> ensuring quality results 
+                        with a smooth and professional experience.
                     </p>
                 </div>
+
 
                 {/* OFFICE INFO */}
                 <div>

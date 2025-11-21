@@ -8,6 +8,7 @@ import Process from './components/Process.jsx';
 import PricingSection from './components/PricingSection.jsx';
 import WhyChooseUs from './components/WhyChoose.jsx';
 import TeamReview from './components/TeamReview.jsx';
+import Testimonials from './components/Testimonials.jsx';
 import Footer from './components/Footer.jsx';
 
 function App() {
@@ -22,6 +23,7 @@ return (
     <Loop />
     {/* <PricingSection /> */}
     <WhyChooseUs />
+    <Testimonials />
     <TeamReview />
     <Footer />
 </div>
