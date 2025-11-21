@@ -25,8 +25,7 @@ return (
     {/* <PricingSection /> */}
     <WhyChooseUs />
     <Testimonials />
-    <FAQ />
-    <TeamReview />
+    {/* <TeamReview /> */}
     <Footer />
 </div>
 );

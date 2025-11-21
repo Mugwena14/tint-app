@@ -1,4 +1,6 @@
 import React, { useEffect } from "react";
+import Beams from "./Beams";
+import FAQ from './FAQ.jsx';
 
 const Testimonials = () => {
   useEffect(() => {
@@ -26,12 +28,30 @@ const Testimonials = () => {
   }, []);
 
   return (
-    <section className="w-full bg-[#0F0F11] text-white py-20 px-6 md:px-35">
+    <section className="relative w-full text-white py-20 px-6 md:px-35 overflow-hidden">
+
+      {/* 🔥 BACKGROUND BEAMS */}
+      <div className="absolute inset-0 w-full h-full -z-10">
+        <Beams
+          beamWidth={2}
+          beamHeight={15}
+          beamNumber={12}
+          lightColor="#ffffff"
+          speed={2}
+          noiseIntensity={1.75}
+          scale={0.2}
+          rotation={0}
+        />
+      </div>
+
+      {/* DARK OVERLAY IF YOU WANT BETTER CONTRAST */}
+      <div className="absolute inset-0 bg-[#0F0F11]/80 -z-10"></div>
+
       <div className="max-w-7xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
           What Our Customers Say
         </h2>
-        <p className="text-center text-gray-400 mb-12 max-w-2xl mx-auto">
+        <p className="text-center text-gray-300 mb-12 max-w-2xl mx-auto">
           See why car owners, homeowners, and businesses trust us for premium window tinting.
         </p>
 
@@ -188,6 +208,12 @@ const Testimonials = () => {
           </div>
 
         </div>
+
+        {/* FAQ Section */}
+        <div className="mt-20">
+          <FAQ />
+        </div>
+
       </div>
     </section>
   );

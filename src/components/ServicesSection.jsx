@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 
 const ServicesSection = () => {
@@ -23,19 +23,19 @@ const ServicesSection = () => {
         },
     ];
 
-    const [bgImage, setBgImage] = useState(services[0].image);
+    // ONLY ONE FIXED BACKGROUND NOW
+    const fixedBg = "/images/car-tint.png";
 
     return (
         <section className="w-full py-20 relative -mt-14 overflow-hidden">
 
-            {/* BACKGROUND IMAGE */}
+            {/* FIXED BACKGROUND IMAGE */}
             <motion.div
-                key={bgImage}
                 initial={{ opacity: 0, scale: 1.05 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.2, ease: "easeOut" }}
                 style={{
-                    backgroundImage: `url(${bgImage})`,
+                    backgroundImage: `url(${fixedBg})`,
                 }}
                 className="absolute inset-0 bg-cover bg-center"
             />
@@ -89,13 +89,11 @@ const ServicesSection = () => {
                         {services.map((service, index) => (
                             <motion.div
                                 key={index}
-                                onMouseEnter={() => setBgImage(service.image)}
-                                onMouseLeave={() => setBgImage(services[0].image)}
                                 initial={{ opacity: 0, y: 30 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.6 }}
                                 viewport={{ once: true }}
-                                
+
                                 className="
                                     bg-transparent
                                     backdrop-blur-2xl
@@ -107,7 +105,9 @@ const ServicesSection = () => {
                                     cursor-pointer
                                     w-[600px]
                                 "
+
                                 whileHover={{ scale: 1.03 }}
+                                transition={{ duration: 0.15, ease: 'easeOut' }}
                             >
                                 <h3 className="text-base font-semibold text-center text-white mb-3">
                                     {service.title}
