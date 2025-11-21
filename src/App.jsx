@@ -9,6 +9,7 @@ import PricingSection from './components/PricingSection.jsx';
 import WhyChooseUs from './components/WhyChoose.jsx';
 import TeamReview from './components/TeamReview.jsx';
 import Testimonials from './components/Testimonials.jsx';
+import FAQ from './components/FAQ.jsx';
 import Footer from './components/Footer.jsx';
 
 function App() {
@@ -24,6 +25,7 @@ return (
     {/* <PricingSection /> */}
     <WhyChooseUs />
     <Testimonials />
+    <FAQ />
     <TeamReview />
     <Footer />
 </div>
