@@ -87,28 +87,28 @@ const ServicesSection = () => {
                     <div className="flex items-start space-x-6 -ml-32">
 
                         {services.map((service, index) => (
-                            <motion.div
-                                key={index}
-                                initial={{ opacity: 0, y: 30 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.6 }}
-                                viewport={{ once: true }}
+                                <motion.div
+    key={index}
+    initial={{ opacity: 0, y: 30 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.6 }}
+    viewport={{ once: true }}
 
-                                className="
-                                    bg-transparent
-                                    backdrop-blur-2xl
-                                    p-6
-                                    rounded-xl
-                                    border border-white/25
-                                    shadow-lg hover:shadow-2xl
-                                    transition
-                                    cursor-pointer
-                                    w-[600px]
-                                "
+    className="
+        bg-transparent
+        backdrop-blur-2xl
+        p-6
+        rounded-xl
+        border border-white/25
+        shadow-lg hover:shadow-2xl
+        transition
+        cursor-pointer
+        w-[600px]
+    "
 
-                                whileHover={{ scale: 1.03 }}
-                                transition={{ duration: 0.15, ease: 'easeOut' }}
-                            >
+    whileHover={{ scale: 1.03 }}
+    transition={{ duration: 0.15, ease: 'easeOut' }}
+>
                                 <h3 className="text-base font-semibold text-center text-white mb-3">
                                     {service.title}
                                 </h3>
