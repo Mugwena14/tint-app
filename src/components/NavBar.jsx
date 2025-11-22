@@ -7,11 +7,11 @@ const NavBar = () => {
       <div className="max-w-7xl mx-auto px-6 h-12 flex items-center justify-between">
 
         {/* Logo */}
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2 md:justify-start justify-start">
           <img 
             src="https://res.cloudinary.com/dkmzveqce/image/upload/v1763676319/ChatGPT_Image_Nov_20_2025_11_56_56_PM_uffggh.png" 
             alt="Tintish Logo" 
-            className="h-10 ml-25 my-2 w-auto object-contain"
+            className="h-10 w-auto object-contain"
           />
         </div>
 
