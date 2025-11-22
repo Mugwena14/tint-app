@@ -23,20 +23,17 @@ const ServicesSection = () => {
         },
     ];
 
-    // ONLY ONE FIXED BACKGROUND NOW
     const fixedBg = "/images/car-tint.png";
 
     return (
-        <section className="w-full py-20 relative -mt-14 overflow-hidden">
+        <section className="w-full py-20 relative -mt-10 overflow-hidden">
 
-            {/* FIXED BACKGROUND IMAGE */}
+            {/* FIXED BACKGROUND */}
             <motion.div
                 initial={{ opacity: 0, scale: 1.05 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.2, ease: "easeOut" }}
-                style={{
-                    backgroundImage: `url(${fixedBg})`,
-                }}
+                style={{ backgroundImage: `url(${fixedBg})` }}
                 className="absolute inset-0 bg-cover bg-center"
             />
 
@@ -48,68 +45,93 @@ const ServicesSection = () => {
                 className="absolute inset-0 bg-black"
             />
 
-            <div className="max-w-7xl mx-auto px-6 relative">
+            <div className="max-w-7xl mx-auto px-4 md:px-6 relative">
 
                 <div className="grid md:grid-cols-2 gap-16 relative">
 
                     {/* LEFT SIDE TEXT */}
-                    <div className="relative text-white">
+                    <div className="relative text-white text-center md:text-left">
 
-                        {/* BACKGROUND TEXT LAYER */}
-                        <div className="relative">
-                            <div className="absolute left-18 top-4 h-[40px] w-[3px] bg-blue-400"></div>
+                        {/* Background text layer */}
+                        <div className="relative flex justify-center md:block">
+                            
+                            {/* Blue line — hide on mobile */}
+                            <div className="absolute left-1/2 md:left-16 top-4 h-[40px] w-[3px] bg-blue-400 hidden md:block -translate-x-1/2 md:translate-x-0"></div>
 
                             <motion.h2
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.6 }}
                                 viewport={{ once: true }}
-                                className="absolute ml-20 top-0 text-7xl font-semibold text-gray-300/30 pointer-events-none select-none"
+                                className="
+                                    absolute 
+                                    top-0
+                                    text-[50px]
+                                    sm:text-[80px]
+                                    md:text-[100px]
+                                    font-semibold 
+                                    text-gray-300/30 
+                                    pointer-events-none 
+                                    select-none
+                                "
                             >
                                 Services
                             </motion.h2>
 
-                            <h2 className="absolute ml-20 left-0 top-[21px] ml-6 text-[23px] font-semibold text-white">
+                            <h2 className="absolute top-[24px] text-xl sm:text-2xl font-semibold text-white">
                                 Services
                             </h2>
                         </div>
 
-                        <div className="mt-[80px]">
-                            <p className="text-gray-200 ml-18 leading-relaxed">
-                                High-quality window tinting designed to improve comfort, <br />
-                                privacy, and protection for your car or home, while <br />
-                                reducing heat and preserving interior materials.
-                            </p>
-                        </div>
+                        <p className="
+                            mt-28 
+                            text-gray-200 
+                            leading-relaxed 
+                            text-sm sm:text-base
+                            max-w-md 
+                            mx-auto 
+                            md:mx-0
+                        ">
+                            High-quality window tinting designed to improve comfort,
+                            privacy, and protection for your car or home, while reducing
+                            heat and preserving interior materials.
+                        </p>
+
                     </div>
 
-                    {/* RIGHT SIDE — GLASS CARDS */}
-                    <div className="flex items-start space-x-6 -ml-32">
+                    {/* RIGHT SIDE — CARDS */}
+                    <div className="
+                        flex 
+                        flex-col 
+                        md:flex-row 
+                        md:space-x-6 
+                        gap-6
+                        items-center 
+                        md:items-start
+                    ">
 
                         {services.map((service, index) => (
-                                <motion.div
-    key={index}
-    initial={{ opacity: 0, y: 30 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    transition={{ duration: 0.6 }}
-    viewport={{ once: true }}
-
-    className="
-        bg-transparent
-        backdrop-blur-2xl
-        p-6
-        rounded-xl
-        border border-white/25
-        shadow-lg hover:shadow-2xl
-        transition
-        cursor-pointer
-        w-[600px]
-    "
-
-    whileHover={{ scale: 1.03 }}
-    transition={{ duration: 0.15, ease: 'easeOut' }}
->
-                                <h3 className="text-base font-semibold text-center text-white mb-3">
+                            <motion.div
+                                key={index}
+                                initial={{ opacity: 0, y: 30 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.6 }}
+                                viewport={{ once: true }}
+                                whileHover={{ scale: 1.03 }}
+                                transition={{ duration: 0.15, ease: "easeOut" }}
+                                className="
+                                    bg-white/10
+                                    backdrop-blur-2xl
+                                    p-6
+                                    rounded-xl
+                                    border border-white/25
+                                    shadow-lg hover:shadow-2xl
+                                    cursor-pointer
+                                    w-full
+                                    md:w-[320px]
+                                "
+                            >
+                                <h3 className="text-lg font-semibold text-center text-white mb-3">
                                     {service.title}
                                 </h3>
                                 <p className="text-gray-200 text-sm leading-relaxed text-center">
