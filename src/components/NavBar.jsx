@@ -22,7 +22,7 @@ const NavBar = () => {
         <div className="flex items-center gap-2 md:justify-start justify-start">
           <img
             src="https://res.cloudinary.com/dkmzveqce/image/upload/v1763676319/ChatGPT_Image_Nov_20_2025_11_56_56_PM_uffggh.png"
-            alt="Tintish Logo"
+            alt="Tintish Tinting Logo"
             className="h-10 w-auto object-contain"
           />
         </div>
