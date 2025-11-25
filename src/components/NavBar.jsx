@@ -9,8 +9,7 @@ const NavBar = () => {
     "Home",
     "Services",
     "Process",
-    "Pricing",
-    "Testimonials",
+    "Reviews",
     "Contact Us",
   ];
 
@@ -113,6 +112,13 @@ const NavBar = () => {
                 >
                   Book Service Now
                 </a>
+                <p>TMM Lofts</p>
+                <p>EuropeCar</p>
+                <p>Pulse Events</p>
+                <p>Salvino del Bene</p>
+                <p>Nissan</p>
+                <p>GlassFit</p>
+                <p>AvaCare Health</p>
               </motion.div>
             </motion.div>
           </motion.div>

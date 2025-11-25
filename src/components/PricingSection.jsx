@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 
 const PricingSection = () => {
-    const phoneNumber = "27688287061"; // WhatsApp number (no +)
+    const phoneNumber = "27688287061";
 
     const plans = [
         {
