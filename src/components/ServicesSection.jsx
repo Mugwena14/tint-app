@@ -3,7 +3,7 @@ import React from "react";
 const ServicesSection = () => {
   return (
     <section
-      className="w-full bg-cover bg-center py-20"
+      className="w-full -mt-14 bg-cover bg-center py-20"
       style={{
         backgroundImage:
           "url('https://res.cloudinary.com/dkmzveqce/image/upload/v1764173400/23a97958-44ba-4261-9108-98955e5142a5_ilmmhg.jpg')",
@@ -19,7 +19,7 @@ const ServicesSection = () => {
   {/* Car Tinting */}
   <div className="bg-white rounded-2xl shadow-lg overflow-hidden p-6 text-gray-900">
     <img
-      src="https://res.cloudinary.com/dkmzveqce/image/upload/v1764169861/pexels-pixabay-210265_pjpjmo.jpg"
+      src="https://res.cloudinary.com/dkmzveqce/image/upload/v1764190433/7bf4c51c-5229-47c6-844e-981d90c3f14d_h1wesz.jpg"
       alt="car tinting"
       className="w-full h-48 object-cover rounded-xl"
     />
@@ -33,7 +33,7 @@ const ServicesSection = () => {
   {/* Home Tinting */}
   <div className="bg-white rounded-2xl shadow-lg overflow-hidden p-6 text-gray-900">
     <img
-      src="https://res.cloudinary.com/dkmzveqce/image/upload/v1764169862/pexels-bidvine-1249611_c7jf2e.jpg"
+      src="https://res.cloudinary.com/dkmzveqce/image/upload/v1764190423/0161e555-104b-4715-bbfd-87e2712650d1_1_urcp6z.jpg"
       alt="home tinting"
       className="w-full h-48 object-cover rounded-xl"
     />
@@ -47,7 +47,7 @@ const ServicesSection = () => {
   {/* Office Tinting */}
   <div className="bg-white rounded-2xl shadow-lg overflow-hidden p-6 text-gray-900">
     <img
-      src="https://res.cloudinary.com/dkmzveqce/image/upload/v1764169861/pexels-kindelmedia-9875440_fzhnbv.jpg"
+      src="https://res.cloudinary.com/dkmzveqce/image/upload/v1764191189/d656f1cd-2b7b-4f67-bbfd-37146d24ec46_1_duuztv.jpg"
       alt="office tinting"
       className="w-full h-48 object-cover rounded-xl"
     />
