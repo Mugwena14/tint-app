@@ -4,6 +4,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, ChevronLeft, ChevronRight, ArrowRight } from "lucide-react";
+import { Eye } from "lucide-react";
 
 const ImageGallery = () => {
   const categories = {
@@ -149,22 +150,34 @@ const ImageGallery = () => {
           className="grid grid-cols-2 md:grid-cols-4 gap-2 place-items-center"
         >
           {displayedImages.map((img, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.3 }}
-              className="aspect-square w-[160px] md:w-[240px] overflow-hidden cursor-pointer rounded-lg"
-              onClick={() => openImage(index)}
-            >
-              <motion.img
-                src={img}
-                alt=""
-                className="w-full h-full object-cover"
-                whileHover={{ scale: 1.05 }}
-                transition={{ duration: 0.2 }}
-              />
-            </motion.div>
+          <motion.div
+            key={index}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.3 }}
+            className="relative aspect-square w-[160px] md:w-[240px] overflow-hidden cursor-pointer rounded-lg"
+            onClick={() => openImage(index)}
+          >
+            <motion.img
+              src={img}
+              alt=""
+              className="w-full h-full object-cover"
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.2 }}
+            />
+
+            {/* Eye Icon */}
+            <div className="
+              absolute bottom-2 right-2 
+              bg-black/70 text-white 
+              p-1.5 rounded-full 
+              shadow-md
+            ">
+              <Eye size={18} />
+            </div>
+          </motion.div>
+
+
           ))}
         </motion.div>
 
