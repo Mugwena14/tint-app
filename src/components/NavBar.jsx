@@ -40,7 +40,7 @@ const NavBar = () => {
           href="https://wa.me/27688287061"
           target="_blank"
           rel="noreferrer noopener"
-          className="hidden md:block text-sm bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition"
+          className="hidden md:block text-sm bg-gray-800 text-white px-4 py-2 rounded-md hover:bg-gray-400 transition"
         >
           Book Service Now
         </a>
@@ -117,6 +117,7 @@ const NavBar = () => {
                 <p>Salvino del Bene</p>
                 <p>Nissan</p>
                 <p>AvaCare Health</p>
+                https://res.cloudinary.com/dkmzveqce/image/upload/v1764168017/f445b79a-94bc-43f0-9a51-59cf1a0f37a2_1_ds87kz.jpg
               </motion.div>
             </motion.div>
           </motion.div>

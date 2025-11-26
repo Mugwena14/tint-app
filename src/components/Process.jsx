@@ -30,7 +30,7 @@ const Process = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5 }}
                     viewport={{ once: true }}
-                    className="w-14 h-[3px] bg-blue-600 mx-auto mb-3"
+                    className="w-14 h-[3px] bg-[#e68a00ff]/80 mx-auto mb-3"
                 ></motion.div>
 
                 <motion.h2
@@ -57,7 +57,7 @@ const Process = () => {
 
                             {/* FLOATING NUMBER */}
                             <span className="absolute -left-1 -translate-x-1/2 -translate-y-7 -top-10
-                                text-[140px] font-bold text-blue-700/80 select-none z-0">
+                                text-[140px] font-bold text-[#e68a00ff]/70 select-none z-0">
                                 {step.num}
                             </span>
 

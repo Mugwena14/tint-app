@@ -88,15 +88,15 @@ const ImageGallery = () => {
 
   return (
     <div className="w-full flex justify-center mt-20 mb-10 relative">
-      <h2 className="absolute -top-2 left-1/2 -translate-x-1/2 -translate-y-10 text-[30px] md:text-[70px] font-bold text-gray-200 select-none pointer-events-none tracking-tight">
+      <h2 className="absolute -top-2 left-1/2 -translate-x-1/2 -translate-y-10 text-[30px] md:text-[70px] font-bold text-[#e68a00ff]/40 select-none pointer-events-none tracking-tight">
         Our Work
       </h2>
 
       <div className="max-w-5xl w-full px-6 relative z-10">
         <div className="text-center mb-4">
-          <h2 className="text-2xl md:text-2xl font-bold text-gray-800 relative inline-block">
+          <h2 className="text-2xl md:text-2xl font-bold text-gray-600 relative inline-block">
           Our Work
-          <span className="block h-[3px] w-20 bg-blue-600 mt-1 mx-auto"></span>
+          <span className="block h-[3px] w-20 bg-[#e68a00ff]/50 mt-1 mx-auto"></span>
           </h2>
 
 
@@ -107,7 +107,7 @@ const ImageGallery = () => {
           href="https://www.tiktok.com/@yourtiktok"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-1 text-blue-600 hover:text-blue-700 font-medium transition"
+          className="inline-flex items-center gap-1 text-gray-800 underline hover:text-blue-700 font-medium transition"
           >
           Check out more of our work on TikTok
           <ArrowRight size={16} />
@@ -129,9 +129,9 @@ const ImageGallery = () => {
               <button
                 key={tab}
                 onClick={() => setCategory(tab)}
-                className={`px-5 py-2 rounded-full text-md font-medium transition cursor-pointer ${
+                className={`px-5 py-1 rounded-full text-md font-medium transition cursor-pointer ${
                   category === tab
-                    ? "bg-blue-600 text-white"
+                    ? "bg-gray-800 text-white"
                     : "bg-gray-200 text-gray-700 hover:bg-gray-300"
                 }`}
               >
@@ -193,7 +193,7 @@ const ImageGallery = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.3 }}
             onClick={() => setShowAll(!showAll)}
-            className="px-5 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition cursor-pointer"
+            className="px-5 py-1 bg-gray-800 text-white rounded-lg hover:bg-blue-700 transition cursor-pointer"
           >
             {showAll ? "View Less" : "View More"}
           </motion.button>
