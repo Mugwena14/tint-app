@@ -42,7 +42,7 @@ const HeroSection = () => {
 
               <span className="relative inline-block">
                 {/* Blue line hidden on mobile */}
-                <span className="absolute hidden md:block left-0 top-0 h-[4px] w-20 bg-[#e68a00ff] rounded-sm -translate-y-8"></span>
+                <span className="absolute hidden md:block left-0 top-0 h-[4px] w-20 bg-[#c9a24d] rounded-sm -translate-y-8"></span>
                 Tintish Window Tinting
               </span>
 
@@ -53,7 +53,7 @@ const HeroSection = () => {
               </span>
             </h1>
 
-            <p className="text-[12px] sm:text-[13px] md:text-[14px] font-medium text-[#e68a00ff] tracking-wide">
+            <p className="text-[12px] sm:text-[13px] md:text-[14px] font-medium text-[#c9a24d] tracking-wide">
               • Seal of Approval — Trusted & Certified Tinting •
             </p>
 
@@ -67,20 +67,20 @@ const HeroSection = () => {
           {/* BUTTON */}
           <button className="group relative inline-flex items-center gap-2 overflow-hidden w-fit mx-auto md:mx-0">
             <span className="absolute inset-0 bg-yellow-600 scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100"></span>
-            <span className="relative z-10 px-4 py-3 bg-[#e68a00ff] text-white transition-colors duration-300 group-hover:bg-transparent text-sm sm:text-base">
+            <span className="relative z-10 px-4 py-3 bg-[#c9a24d] text-white transition-colors duration-300 group-hover:bg-transparent text-sm sm:text-base">
               Explore
             </span>
-            <span className="relative -ml-3 sm:-ml-4 z-10 text-[#e68a00ff] group-hover:text-white transition-colors duration-300 text-sm sm:text-base">
+            <span className="relative -ml-3 sm:-ml-4 z-10 text-[#c9a24d] group-hover:text-white transition-colors duration-300 text-sm sm:text-base">
               Services
             </span>
             <ArrowRight
               size={18}
-              className="relative z-10 text-[#e68a00ff] group-hover:text-white transition-colors duration-300"
+              className="relative z-10 text-[#c9a24d] group-hover:text-white transition-colors duration-300"
             />
           </button>
 
           {/* ICONS */}
-          <div className="flex items-center justify-center md:justify-start gap-4 text-[#e68a00ff] pt-2">
+          <div className="flex items-center justify-center md:justify-start gap-4 text-[#c9a24d] pt-2">
             <Instagram size={20} className="cursor-pointer" />
             <Facebook size={20} className="cursor-pointer" />
             <Twitter size={20} className="cursor-pointer" />
@@ -94,7 +94,7 @@ const HeroSection = () => {
           transition={{ duration: 0.7 }}
           className="relative w-full justify-center items-center -mt-16 hidden md:flex"
         >
-          <div className="absolute top-[-1rem] bottom-[-3rem] right-6 w-[80%] bg-[#e68a00ff] shadow-lg"></div>
+          <div className="absolute top-[-1rem] bottom-[-3rem] right-6 w-[80%] bg-[#c9a24d] shadow-lg"></div>
 
           <img
             src="https://res.cloudinary.com/dkmzveqce/image/upload/v1764200273/ChatGPT_Image_Nov_27_2025_01_30_04_AM_vbc89t.png"

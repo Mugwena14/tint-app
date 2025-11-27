@@ -88,19 +88,17 @@ const ImageGallery = () => {
 
   return (
     <div className="w-full flex justify-center mt-20 mb-10 relative">
-      <h2 className="absolute -top-2 left-1/2 -translate-x-1/2 -translate-y-10 text-[30px] md:text-[70px] font-bold text-[#e68a00ff]/40 select-none pointer-events-none tracking-tight">
-        Our Work
-      </h2>
-
       <div className="max-w-5xl w-full px-6 relative z-10">
         <div className="text-center mb-4">
-          <h2 className="text-2xl md:text-2xl font-bold text-gray-600 relative inline-block">
-          Our Work
-          <span className="block h-[3px] w-20 bg-[#e68a00ff]/50 mt-1 mx-auto"></span>
-          </h2>
+          <p className="text-sm md:text-sm text-[#c9a24d] font-semibold relative inline-block">
+            OUR WORK
+          <span className="block h-[2px] w-10 bg-[#c9a24d]/50 mt-1 mx-auto"></span>
+          </p>
+        <h2 className="text-3xl md:text-5xl text-gray-700 font-extrabold leading-tight">
+          A curated collection of our window <br /> tinting projects.
+        </h2>
 
-
-          <p className="text-gray-500 text-sm md:text-[15px] max-w-md mx-auto mt-3">
+          {/* <p className="text-gray-500 text-sm md:text-[15px] max-w-md mx-auto mt-3">
           A curated collection of our window tinting projects — showcasing premium
           finishes across vehicles, homes and commercial spaces.{' '}
           <a
@@ -112,7 +110,7 @@ const ImageGallery = () => {
           Check out more of our work on TikTok
           <ArrowRight size={16} />
           </a>
-          </p>
+          </p> */}
         </div>
         
 
@@ -131,7 +129,7 @@ const ImageGallery = () => {
                 onClick={() => setCategory(tab)}
                 className={`px-5 py-1 rounded-full text-md font-medium transition cursor-pointer ${
                   category === tab
-                    ? "bg-gray-800 text-white"
+                    ? "bg-[#c9a24d] text-white"
                     : "bg-gray-200 text-gray-700 hover:bg-gray-300"
                 }`}
               >

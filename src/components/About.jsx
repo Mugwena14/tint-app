@@ -21,7 +21,7 @@ const About = () => {
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         {/* Left Text Section */}
         <div>
-          <h2 className="text-2xl font-semibold mb-4 tracking-wide">ABOUT US</h2>
+          <h2 className="text-2xl font-semibold text-[#c9a24d] mb-4 tracking-wide">ABOUT US</h2>
             <p className="text-gray-600 leading-relaxed mb-6 max-w-md">
                 We specialize in professional window tinting for cars, homes, 
                 and offices — enhancing privacy, reducing heat, and improving comfort with 
@@ -31,10 +31,10 @@ const About = () => {
             </p>
 
           <div className="flex gap-4">
-            <button className="bg-green-500 text-white px-6 py-3 rounded shadow-md hover:bg-green-600 transition">
+            <button className="bg-[#c9a24d] text-white px-6 py-3 rounded shadow-md hover:bg-[#c9a24d]/90 transition">
               LEARN MORE
             </button>
-            <button className="border border-green-500 text-green-500 px-6 py-3 rounded flex items-center gap-2 hover:bg-green-50 transition">
+            <button className="border border-[#c9a24d] text-[#c9a24d] px-6 py-3 rounded flex items-center gap-2 hover:bg-[#c9a24d] hover:text-white transition">
               Watch Video <ArrowRight size={16} />
             </button>
           </div>
@@ -45,7 +45,7 @@ const About = () => {
           {stats.map((item, i) => (
             <div
               key={i}
-              className="bg-white p-6 shadow-sm rounded-md border text-center"
+              className="bg-white p-6 shadow-sm rounded-md border-[#c9a24d] text-center"
             >
               <h3 className="text-xl font-semibold mb-1">{item.value}</h3>
               <p className="text-gray-500 text-sm">{item.label}</p>
@@ -56,7 +56,7 @@ const About = () => {
 
       {/* Tint Percentages Section */}
       <div className="max-w-7xl mx-auto mt-20">
-        <p className="text-gray-700 mb-6 text-lg font-medium">
+        <p className="text-gray-700 mb-6 text-lg font-semibold">
           We provide different car window tint percentages to suit your needs.
         </p>
 
@@ -64,7 +64,7 @@ const About = () => {
           {tintCards.map((card, index) => (
             <div
               key={index}
-              className="bg-white shadow-sm rounded-lg p-4 border hover:shadow-lg transition cursor-pointer"
+              className="bg-white shadow-sm rounded-lg p-4 border-[#c9a24d] hover:shadow-lg transition cursor-pointer"
             >
               <img
                 src={card.img}

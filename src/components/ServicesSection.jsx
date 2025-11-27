@@ -10,8 +10,8 @@ const ServicesSection = () => {
       }}
     >
       <div className="max-w-6xl mx-auto px-6 text-center text-white drop-shadow-[0_0_8px_rgba(0,0,0,0.4)]">
-        <p className="text-sm font-semibold tracking-wide uppercase mb-2">Our Service</p>
-        <h2 className="text-3xl md:text-5xl font-extrabold leading-tight">
+        <p className="text-sm text-gray-700 font-semibold tracking-wide uppercase mb-2">Our Services</p>
+        <h2 className="text-3xl md:text-5xl text-gray-700 font-extrabold leading-tight">
           We’re providing quality Tinting <br /> & Fixing Services
         </h2>
 
@@ -21,7 +21,7 @@ const ServicesSection = () => {
     <img
       src="https://res.cloudinary.com/dkmzveqce/image/upload/v1764190433/7bf4c51c-5229-47c6-844e-981d90c3f14d_h1wesz.jpg"
       alt="car tinting"
-      className="w-full h-48 object-cover rounded-xl"
+      className="w-full h-48 object-cover rounded-sm"
     />
     <h3 className="font-bold text-xl mt-6">Car Tinting</h3>
     <p className="text-gray-600 mt-2 text-sm">
@@ -35,7 +35,7 @@ const ServicesSection = () => {
     <img
       src="https://res.cloudinary.com/dkmzveqce/image/upload/v1764190423/0161e555-104b-4715-bbfd-87e2712650d1_1_urcp6z.jpg"
       alt="home tinting"
-      className="w-full h-48 object-cover rounded-xl"
+      className="w-full h-48 object-cover rounded-sm"
     />
     <h3 className="font-bold text-xl mt-6">Home Tinting</h3>
     <p className="text-gray-600 mt-2 text-sm">
@@ -49,7 +49,7 @@ const ServicesSection = () => {
     <img
       src="https://res.cloudinary.com/dkmzveqce/image/upload/v1764191189/d656f1cd-2b7b-4f67-bbfd-37146d24ec46_1_duuztv.jpg"
       alt="office tinting"
-      className="w-full h-48 object-cover rounded-xl"
+      className="w-full h-48 object-cover rounded-sm"
     />
     <h3 className="font-bold text-xl mt-6">Office Tinting</h3>
     <p className="text-gray-600 mt-2 text-sm">
