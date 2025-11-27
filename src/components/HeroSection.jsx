@@ -97,7 +97,7 @@ const HeroSection = () => {
           <div className="absolute top-[-1rem] bottom-[-3rem] right-6 w-[80%] bg-[#e68a00ff] shadow-lg"></div>
 
           <img
-            src="/images/car.png"
+            src="https://res.cloudinary.com/dkmzveqce/image/upload/v1764200273/ChatGPT_Image_Nov_27_2025_01_30_04_AM_vbc89t.png"
             alt="Tinted Car"
             className="relative z-10 w-[780px] max-w-none drop-shadow-2xl"
           />

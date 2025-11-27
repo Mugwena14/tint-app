@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import NavBar from './components/NavBar.jsx';
 import HeroSection from './components/HeroSection.jsx';
+import About from './components/About.jsx';
 import Loop from './components/Loop.jsx';
 import ServicesSection from './components/ServicesSection.jsx';
 import ImageGallery from './components/ImageGallery.jsx';
@@ -18,6 +19,7 @@ return (
     <NavBar />
     <HeroSection />
     <Loop />
+    <About />
     <ServicesSection />
     <ImageGallery />
     <Process />
