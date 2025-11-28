@@ -37,7 +37,7 @@ const BookingModal = ({ open, onClose }) => {
       const data = await res.json();
 
       if (data.success) {
-        setMessage("Booking sent successfully! We’ll contact you shortly.");
+        setMessage("Booking sent successfully! We’ve sent you a confirmation email.");
         e.target.reset();
         setImages([]);
         setPreview([]);
