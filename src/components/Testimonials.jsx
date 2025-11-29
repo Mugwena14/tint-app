@@ -95,7 +95,7 @@ const Testimonials = () => {
 
 
   return (
-    <section className="relative w-full text-white py-20 px-6 md:px-35 overflow-hidden">
+    <section className="relative w-full -mt-11 text-white py-20 px-6 md:px-35 overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 w-full h-full -z-10">
         <Beams

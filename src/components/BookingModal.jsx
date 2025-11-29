@@ -55,7 +55,6 @@ const BookingModal = ({ open, onClose }) => {
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
       >
-        {/* MODAL */}
         <motion.div
           onClick={(e) => e.stopPropagation()}
           initial={{ y: 40, opacity: 0 }}
@@ -64,7 +63,6 @@ const BookingModal = ({ open, onClose }) => {
           transition={{ type: "spring", stiffness: 160, damping: 18 }}
           className="w-full max-w-lg bg-white rounded-2xl p-4 shadow-xl border border-[#c9a24d]/20 relative"
         >
-          {/* Close Button */}
           <button
             onClick={onClose}
             className="absolute top-3 right-3 text-black hover:text-[#c9a24d]"
@@ -72,85 +70,109 @@ const BookingModal = ({ open, onClose }) => {
             <X size={22} />
           </button>
 
-          {/* Title */}
           <h2 className="text-xl font-bold mb-3 text-black">
             Book Tinting Service
           </h2>
 
-          {/* Message */}
           {message && (
-            <p className="text-center mb-2 text-[#c9a24d] text-sm">
-              {message}
-            </p>
+            <p className="text-center mb-2 text-[#c9a24d] text-sm">{message}</p>
           )}
 
-          {/* FORM */}
           <form onSubmit={handleSubmit} className="space-y-2.5">
+
             {/* Row 1 */}
             <div className="grid grid-cols-2 gap-3">
-              <input
-                type="text"
-                name="name"
-                placeholder="Full Name"
-                required
-                className="p-2 border rounded-lg text-sm"
-              />
-              <input
-                type="email"
-                name="email"
-                placeholder="Email"
-                required
-                className="p-2 border rounded-lg text-sm"
-              />
+              <div>
+                <label className="text-xs font-medium text-gray-700">Full Name</label>
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Full Name"
+                  required
+                  className="p-2 border rounded-lg text-sm w-full"
+                />
+              </div>
+
+              <div>
+                <label className="text-xs font-medium text-gray-700">Email</label>
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Email"
+                  required
+                  className="p-2 border rounded-lg text-sm w-full"
+                />
+              </div>
             </div>
 
             {/* Row 2 */}
             <div className="grid grid-cols-2 gap-3">
-              <input
-                type="text"
-                name="location"
-                placeholder="Location"
-                required
-                className="p-2 border rounded-lg text-sm"
-              />
-              <select
-                name="service"
-                required
-                className="p-2 border rounded-lg text-sm bg-white"
-              >
-                <option value="">Service Type</option>
-                <option value="Car Tinting">Car Tinting</option>
-                <option value="Home Tinting">Home Tinting</option>
-                <option value="Office Tinting">Office Tinting</option>
-                <option value="Tint Removal">Tint Removal</option>
-                <option value="Smash & Grab">Smash & Grab</option>
-              </select>
+              <div>
+                <label className="text-xs font-medium text-gray-700">Location</label>
+                <input
+                  type="text"
+                  name="location"
+                  placeholder="Location"
+                  required
+                  className="p-2 border rounded-lg text-sm w-full"
+                />
+              </div>
+
+              <div>
+                <label className="text-xs font-medium text-gray-700">Service Type</label>
+                <select
+                  name="service"
+                  required
+                  className="p-2 border rounded-lg text-sm bg-white w-full"
+                >
+                  <option value="">Select Service</option>
+                  <option value="Car Tinting">Car Tinting</option>
+                  <option value="Home Tinting">Home Tinting</option>
+                  <option value="Office Tinting">Office Tinting</option>
+                  <option value="Tint Removal">Tint Removal</option>
+                  <option value="Smash & Grab">Smash & Grab</option>
+                </select>
+              </div>
             </div>
 
             {/* Row 3 */}
             <div className="grid grid-cols-2 gap-3">
-              <input
-                type="date"
-                name="preferredDate"
-                className="p-2 border rounded-lg text-sm"
-              />
-              <input
-                type="time"
-                name="preferredTime"
-                className="p-2 border rounded-lg text-sm"
-              />
+              <div>
+                <label className="text-xs font-medium text-gray-700">Preferred Date</label>
+                <input
+                  type="date"
+                  name="preferredDate"
+                  className="p-2 border rounded-lg text-sm w-full"
+                />
+              </div>
+
+              <div>
+                <label className="text-xs font-medium text-gray-700">Preferred Time</label>
+                <input
+                  type="time"
+                  name="preferredTime"
+                  className="p-2 border rounded-lg text-sm w-full"
+                />
+              </div>
             </div>
 
-            {/* Message + Upload in 2 columns */}
+            {/* Message + Upload */}
             <div className="grid grid-cols-2 gap-3">
-              <textarea
-                name="message"
-                rows="3"
-                placeholder="Message..."
-                required
-                className="p-2 border rounded-lg text-sm resize-none"
-              />
               <div>
+                <label className="text-xs font-medium text-gray-700">Message</label>
+                <textarea
+                  name="message"
+                  rows="3"
+                  placeholder="Message..."
+                  required
+                  className="p-2 border rounded-lg text-sm resize-none w-full"
+                />
+              </div>
+
+              <div>
+                <label className="text-xs font-medium text-gray-700">
+                  Image Upload (optional)
+                </label>
                 <input
                   type="file"
                   multiple
@@ -158,6 +180,7 @@ const BookingModal = ({ open, onClose }) => {
                   onChange={handleImageUpload}
                   className="p-2 border rounded-lg w-full text-sm"
                 />
+
                 {preview.length > 0 && (
                   <div className="flex gap-2 mt-2 flex-wrap">
                     {preview.map((src, i) => (
@@ -172,7 +195,6 @@ const BookingModal = ({ open, onClose }) => {
               </div>
             </div>
 
-            {/* Submit */}
             <button
               type="submit"
               disabled={loading}
