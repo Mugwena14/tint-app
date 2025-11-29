@@ -25,7 +25,7 @@ return (
     <Process />
     <Loop />
     {/* <PricingSection /> */}
-    <WhyChooseUs />
+    {/* <WhyChooseUs /> */}
     <Testimonials />
     {/* <TeamReview /> */}
     <Footer />

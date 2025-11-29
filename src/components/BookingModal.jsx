@@ -10,16 +10,12 @@ const BookingModal = ({ open, onClose }) => {
 
   if (!open) return null;
 
-  // Handle file uploads
   const handleImageUpload = (e) => {
     const files = Array.from(e.target.files).slice(0, 3);
     setImages(files);
-
-    const previews = files.map((file) => URL.createObjectURL(file));
-    setPreview(previews);
+    setPreview(files.map((f) => URL.createObjectURL(f)));
   };
 
-  // Handle submit
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
@@ -35,17 +31,16 @@ const BookingModal = ({ open, onClose }) => {
       });
 
       const data = await res.json();
-
       if (data.success) {
-        setMessage("Booking sent successfully! We’ve sent you a confirmation email.");
+        setMessage("Booking sent! Check your email.");
         e.target.reset();
         setImages([]);
         setPreview([]);
       } else {
         setMessage("Failed to send booking.");
       }
-    } catch (err) {
-      setMessage("Server error. Please try again.");
+    } catch {
+      setMessage("Server error. Try again.");
     }
 
     setLoading(false);
@@ -53,9 +48,8 @@ const BookingModal = ({ open, onClose }) => {
 
   return (
     <AnimatePresence>
-      {/* BACKDROP */}
       <motion.div
-        className="fixed inset-0 bg-black/40 backdrop-blur-sm z-50 flex justify-center items-center p-4"
+        className="fixed inset-0 bg-black/40 backdrop-blur-sm z-50 flex justify-center items-center p-3"
         onClick={onClose}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -64,76 +58,67 @@ const BookingModal = ({ open, onClose }) => {
         {/* MODAL */}
         <motion.div
           onClick={(e) => e.stopPropagation()}
-          initial={{ y: 50, opacity: 0, scale: 0.95 }}
-          animate={{ y: 0, opacity: 1, scale: 1 }}
-          exit={{ y: 50, opacity: 0, scale: 0.95 }}
-          transition={{ type: "spring", stiffness: 200, damping: 20 }}
-          className="w-full max-w-2xl bg-white rounded-2xl p-8 shadow-2xl border border-[#c9a24d]/20 relative"
+          initial={{ y: 40, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          exit={{ y: 40, opacity: 0 }}
+          transition={{ type: "spring", stiffness: 160, damping: 18 }}
+          className="w-full max-w-lg bg-white rounded-2xl p-4 shadow-xl border border-[#c9a24d]/20 relative"
         >
           {/* Close Button */}
           <button
             onClick={onClose}
-            className="absolute top-4 right-4 text-black hover:text-[#c9a24d] transition"
+            className="absolute top-3 right-3 text-black hover:text-[#c9a24d]"
           >
-            <X size={26} />
+            <X size={22} />
           </button>
 
           {/* Title */}
-          <h2 className="text-3xl font-bold mb-6 text-black">
-            Book Your Tinting Service
+          <h2 className="text-xl font-bold mb-3 text-black">
+            Book Tinting Service
           </h2>
 
-          {/* Response message */}
+          {/* Message */}
           {message && (
-            <p className="mb-4 text-center font-medium text-[#c9a24d]">
+            <p className="text-center mb-2 text-[#c9a24d] text-sm">
               {message}
             </p>
           )}
 
           {/* FORM */}
-          <form onSubmit={handleSubmit} className="space-y-5">
-            {/* Name */}
-            <div>
-              <label className="block mb-1 font-medium text-black">Full Name</label>
+          <form onSubmit={handleSubmit} className="space-y-2.5">
+            {/* Row 1 */}
+            <div className="grid grid-cols-2 gap-3">
               <input
                 type="text"
                 name="name"
+                placeholder="Full Name"
                 required
-                className="w-full p-3 border rounded-xl focus:ring-2 focus:ring-[#c9a24d]"
+                className="p-2 border rounded-lg text-sm"
               />
-            </div>
-
-            {/* Email */}
-            <div>
-              <label className="block mb-1 font-medium text-black">Email</label>
               <input
                 type="email"
                 name="email"
+                placeholder="Email"
                 required
-                className="w-full p-3 border rounded-xl focus:ring-2 focus:ring-[#c9a24d]"
+                className="p-2 border rounded-lg text-sm"
               />
             </div>
 
-            {/* Location */}
-            <div>
-              <label className="block mb-1 font-medium text-black">Location</label>
+            {/* Row 2 */}
+            <div className="grid grid-cols-2 gap-3">
               <input
                 type="text"
                 name="location"
+                placeholder="Location"
                 required
-                className="w-full p-3 border rounded-xl focus:ring-2 focus:ring-[#c9a24d]"
+                className="p-2 border rounded-lg text-sm"
               />
-            </div>
-
-            {/* Services */}
-            <div>
-              <label className="block mb-1 font-medium text-black">Service Type</label>
               <select
                 name="service"
                 required
-                className="w-full p-3 border rounded-xl bg-white focus:ring-2 focus:ring-[#c9a24d]"
+                className="p-2 border rounded-lg text-sm bg-white"
               >
-                <option value="">Select a service</option>
+                <option value="">Service Type</option>
                 <option value="Car Tinting">Car Tinting</option>
                 <option value="Home Tinting">Home Tinting</option>
                 <option value="Office Tinting">Office Tinting</option>
@@ -142,68 +127,56 @@ const BookingModal = ({ open, onClose }) => {
               </select>
             </div>
 
-            {/* Date Time */}
-            <div className="grid grid-cols-2 gap-4">
-              <div>
-                <label className="block mb-1 font-medium text-black">Preferred Date</label>
-                <input
-                  type="date"
-                  name="preferredDate"
-                  className="w-full p-3 border rounded-xl focus:ring-2 focus:ring-[#c9a24d]"
-                />
-              </div>
-              <div>
-                <label className="block mb-1 font-medium text-black">Preferred Time</label>
-                <input
-                  type="time"
-                  name="preferredTime"
-                  className="w-full p-3 border rounded-xl focus:ring-2 focus:ring-[#c9a24d]"
-                />
-              </div>
-            </div>
-
-            {/* Message */}
-            <div>
-              <label className="block mb-1 font-medium text-black">Additional Message</label>
-              <textarea
-                name="message"
-                rows="4"
-                required
-                className="w-full p-3 border rounded-xl focus:ring-2 focus:ring-[#c9a24d] placeholder-gray-500"
-                placeholder="Explain what you need..."
-              ></textarea>
-            </div>
-
-            {/* Uploads */}
-            <div>
-              <label className="block mb-2 font-medium text-black">Upload Images (optional, max 3)</label>
+            {/* Row 3 */}
+            <div className="grid grid-cols-2 gap-3">
               <input
-                type="file"
-                accept="image/*"
-                multiple
-                onChange={handleImageUpload}
-                className="w-full p-2 border rounded-xl focus:ring-2 focus:ring-[#c9a24d]"
+                type="date"
+                name="preferredDate"
+                className="p-2 border rounded-lg text-sm"
+              />
+              <input
+                type="time"
+                name="preferredTime"
+                className="p-2 border rounded-lg text-sm"
               />
             </div>
 
-            {/* Preview */}
-            {preview.length > 0 && (
-              <div className="flex gap-4 mt-3">
-                {preview.map((src, index) => (
-                  <img
-                    key={index}
-                    src={src}
-                    className="w-20 h-20 object-cover rounded-xl border border-[#c9a24d]/40"
-                  />
-                ))}
+            {/* Message + Upload in 2 columns */}
+            <div className="grid grid-cols-2 gap-3">
+              <textarea
+                name="message"
+                rows="3"
+                placeholder="Message..."
+                required
+                className="p-2 border rounded-lg text-sm resize-none"
+              />
+              <div>
+                <input
+                  type="file"
+                  multiple
+                  accept="image/*"
+                  onChange={handleImageUpload}
+                  className="p-2 border rounded-lg w-full text-sm"
+                />
+                {preview.length > 0 && (
+                  <div className="flex gap-2 mt-2 flex-wrap">
+                    {preview.map((src, i) => (
+                      <img
+                        key={i}
+                        src={src}
+                        className="w-14 h-14 object-cover rounded-lg border border-[#c9a24d]/30"
+                      />
+                    ))}
+                  </div>
+                )}
               </div>
-            )}
+            </div>
 
-            {/* Submit Button */}
+            {/* Submit */}
             <button
               type="submit"
               disabled={loading}
-              className="w-full bg-black text-white p-3 rounded-xl text-lg font-medium hover:bg-[#c9a24d] hover:text-black transition-all duration-300"
+              className="w-full bg-black text-white p-2.5 rounded-lg text-sm font-medium hover:bg-[#c9a24d] hover:text-black transition"
             >
               {loading ? "Sending..." : "Submit Booking"}
             </button>

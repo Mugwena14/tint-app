@@ -76,6 +76,7 @@ const NavBar = () => {
                 onClick={() => setOpen(false)}
                 aria-hidden={false}
               >
+
                 {/* Panel */}
                 <motion.div
                   key="panel"
@@ -125,8 +126,12 @@ const NavBar = () => {
         </AnimatePresence>
       </nav>
 
-      {/* Booking Modal */}
-      <BookingModal open={bookingOpen} onClose={() => setBookingOpen(false)} />
+      {/* Booking Modal with reduced size */}
+      <BookingModal 
+        open={bookingOpen} 
+        onClose={() => setBookingOpen(false)} 
+        size="sm"
+      />
     </>
   );
 };
