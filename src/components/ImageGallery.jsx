@@ -90,9 +90,9 @@ const ImageGallery = () => {
     <div className="w-full flex justify-center mt-20 mb-10 relative">
       <div className="max-w-5xl w-full px-6 relative z-10">
         <div className="text-center mb-4">
-          <p className="text-sm md:text-sm text-[#c9a24d] font-semibold relative inline-block">
+          <p className="text-sm md:text-sm text-[#0390fc] font-semibold relative inline-block">
             OUR WORK
-          <span className="block h-[2px] w-10 bg-[#c9a24d]/50 mt-1 mx-auto"></span>
+          <span className="block h-[2px] w-10 bg-[#0390fc]/50 mt-1 mx-auto"></span>
           </p>
         <h2 className="text-3xl md:text-5xl text-gray-700 font-extrabold leading-tight">
           A curated collection of our window <br /> tinting projects.
@@ -129,7 +129,7 @@ const ImageGallery = () => {
                 onClick={() => setCategory(tab)}
                 className={`px-5 py-1 rounded-full text-md font-medium transition cursor-pointer ${
                   category === tab
-                    ? "bg-[#c9a24d] text-white"
+                    ? "bg-[#0390fc] text-white"
                     : "bg-gray-200 text-gray-700 hover:bg-gray-300"
                 }`}
               >

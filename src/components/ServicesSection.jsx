@@ -19,11 +19,11 @@ const ServicesSection = () => {
       className="w-full -mt-14 bg-cover bg-center py-20"
       style={{
         backgroundImage:
-          "url('https://res.cloudinary.com/dkmzveqce/image/upload/v1764173400/23a97958-44ba-4261-9108-98955e5142a5_ilmmhg.jpg')",
+          "url('https://res.cloudinary.com/dkmzveqce/image/upload/v1764926621/ChatGPT_Image_Dec_5_2025_11_20_07_AM_m1qvsg.png')",
       }}
     >
       <div className="max-w-6xl mx-auto px-6 text-center text-white drop-shadow-[0_0_8px_rgba(0,0,0,0.4)]">
-        <p className="text-sm text-gray-700 font-semibold tracking-wide uppercase mb-2">Our Services</p>
+        <p className="text-sm text-white font-semibold tracking-wide uppercase mb-2">Our Services</p>
         <h2 className="text-2xl md:text-4xl text-gray-700 font-extrabold leading-tight">
           We’re providing quality Tinting <br /> & Fixing Services
         </h2>
@@ -56,7 +56,7 @@ const ServicesSection = () => {
                   ]
                 )
               }
-              className="mt-4 text-[#c9a24d] font-semibold hover:underline"
+              className="mt-4 text-[#0390fc] font-semibold hover:underline"
             >
               Read More
             </button>
@@ -88,7 +88,7 @@ const ServicesSection = () => {
                   ]
                 )
               }
-              className="mt-4 text-[#c9a24d] font-semibold hover:underline"
+              className="mt-4 text-[#0390fc] font-semibold hover:underline"
             >
               Read More
             </button>
@@ -120,7 +120,7 @@ const ServicesSection = () => {
                   ]
                 )
               }
-              className="mt-4 text-[#c9a24d] font-semibold hover:underline"
+              className="mt-4 text-[#0390fc] font-semibold hover:underline"
             >
               Read More
             </button>

@@ -125,7 +125,7 @@ const Testimonials = () => {
 
           <button
             onClick={() => setModalOpen(true)}
-            className="hidden md:block px-5 py-2 bg-[#c9a24d] text-black font-semibold rounded-lg shadow hover:bg-[#b18e3f] transition"
+            className="hidden md:block px-5 py-2 bg-[#0390fc] text-black font-semibold rounded-lg shadow hover:bg-[#0554e8] transition"
           >
             Leave a Review
           </button>
@@ -134,7 +134,7 @@ const Testimonials = () => {
         {/* Mobile button */}
         <button
           onClick={() => setModalOpen(true)}
-          className="md:hidden w-full py-3 mb-10 bg-[#c9a24d] text-black font-semibold rounded-lg shadow hover:bg-[#b18e3f] transition"
+          className="md:hidden w-full py-3 mb-10 bg-[#0390fc] text-black font-semibold rounded-lg shadow hover:bg-[#0554e8] transition"
         >
           Leave a Review
         </button>
