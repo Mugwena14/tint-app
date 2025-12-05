@@ -9,14 +9,20 @@ import { Eye } from "lucide-react";
 const ImageGallery = () => {
   const categories = {
     cars: [
-      "https://res.cloudinary.com/dkmzveqce/image/upload/v1763558761/1b27c0bd-0dd3-46ab-b1d6-10e9c725ae23_qehdet.jpg",
-      "https://res.cloudinary.com/dkmzveqce/image/upload/v1763558767/6f3ad420-6860-40dd-b18f-e832645e993c_kcana0.jpg",
-      "https://res.cloudinary.com/dkmzveqce/image/upload/v1763558757/276121a8-9a94-4574-bbb4-c99fee996cf0_tdlxrt.jpg",
-      "https://res.cloudinary.com/dkmzveqce/image/upload/v1763558744/3a452216-eed8-46ed-897a-194579110111_w0mcho.jpg",
-      "https://res.cloudinary.com/dkmzveqce/image/upload/v1763558706/6372b7da-8cf3-49a9-b9d1-6fc392ffeed8_iq5wjv.jpg",
-      "https://res.cloudinary.com/dkmzveqce/image/upload/v1763558699/c56770d2-cb6e-49a7-bc51-4b3f938c4cd1_vtsbgv.jpg",
+      "https://res.cloudinary.com/dkmzveqce/image/upload/v1764970544/image4_pjolme.jpg",
+      "https://res.cloudinary.com/dkmzveqce/image/upload/v1764968952/image1_wzowuz.jpg",
       "https://res.cloudinary.com/dkmzveqce/image/upload/v1763558895/7951de7f-39d5-495e-8c51-3d02d62aa29e_q1mrdr.jpg",
-      "https://res.cloudinary.com/dkmzveqce/image/upload/v1763558762/2888f523-e7a4-43d5-b1de-ee6024e41c5f_twnldd.jpg"
+      "https://res.cloudinary.com/dkmzveqce/image/upload/v1764968926/image0_d8ghjv.jpg",
+
+      "https://res.cloudinary.com/dkmzveqce/image/upload/v1764968953/image3_pjcf8j.jpg",
+      "https://res.cloudinary.com/dkmzveqce/image/upload/v1764970550/image1_1_jkqqyd.jpg",
+      "https://res.cloudinary.com/dkmzveqce/image/upload/v1764970534/image2_1_fpeni1.jpg",
+      "https://res.cloudinary.com/dkmzveqce/image/upload/v1764970530/image5_pk86vz.jpg",
+      
+      "https://res.cloudinary.com/dkmzveqce/image/upload/v1763558757/276121a8-9a94-4574-bbb4-c99fee996cf0_tdlxrt.jpg",
+      "https://res.cloudinary.com/dkmzveqce/image/upload/v1764970551/image3_1_fhpygp.jpg",
+      "https://res.cloudinary.com/dkmzveqce/image/upload/v1764970504/image0_1_e4vcdi.jpg",
+      "https://res.cloudinary.com/dkmzveqce/image/upload/v1763558762/2888f523-e7a4-43d5-b1de-ee6024e41c5f_twnldd.jpg",
     ],
     homes: [
       "https://res.cloudinary.com/dkmzveqce/image/upload/v1763563701/0161e555-104b-4715-bbfd-87e2712650d1_ff7odc.jpg",
@@ -26,7 +32,12 @@ const ImageGallery = () => {
       "https://res.cloudinary.com/dkmzveqce/image/upload/v1763563679/59050003-a6b7-4e93-a8f9-e504f1f8ed0b_trbwut.jpg",
       "https://res.cloudinary.com/dkmzveqce/image/upload/v1763563653/c2892d5d-27e4-4c2c-9f8b-c8b7d2de1028_v1imvf.jpg",
       "https://res.cloudinary.com/dkmzveqce/image/upload/v1763563646/98b24657-6833-465b-8c68-c74ff5821b36_qii2fx.jpg",
-      "https://res.cloudinary.com/dkmzveqce/image/upload/v1763563653/c2892d5d-27e4-4c2c-9f8b-c8b7d2de1028_v1imvf.jpg"
+      "https://res.cloudinary.com/dkmzveqce/image/upload/v1764971386/image0_3_kefjwj.jpg",
+
+      "https://res.cloudinary.com/dkmzveqce/image/upload/v1764971389/image2_2_iruyzi.jpg",
+      "https://res.cloudinary.com/dkmzveqce/image/upload/v1764971384/image1_3_yles55.jpg",
+      "https://res.cloudinary.com/dkmzveqce/image/upload/v1764971350/image4_1_so3xfm.jpg",
+      "https://res.cloudinary.com/dkmzveqce/image/upload/v1764971364/image3_2_v7wgof.jpg"
     ],
     offices: [
       "https://res.cloudinary.com/dkmzveqce/image/upload/v1763562016/99269d91-e1b8-4e39-9868-a4173f394457_t0mb03.jpg",
@@ -87,14 +98,14 @@ const ImageGallery = () => {
   const displayedImages = showAll ? images : images.slice(0, 4);
 
   return (
-    <div className="w-full flex justify-center mt-20 mb-10 relative">
+    <div id="work" className="w-full flex justify-center mt-20 mb-10 relative">
       <div className="max-w-5xl w-full px-6 relative z-10">
         <div className="text-center mb-4">
           <p className="text-sm md:text-sm text-[#0390fc] font-semibold relative inline-block">
             OUR WORK
           <span className="block h-[2px] w-10 bg-[#0390fc]/50 mt-1 mx-auto"></span>
           </p>
-        <h2 className="text-3xl md:text-5xl text-gray-700 font-extrabold leading-tight">
+        <h2 className="hidden md:block text-2xl md:text-3xl text-gray-700 font-extrabold leading-tight">
           A curated collection of our window <br /> tinting projects.
         </h2>
 

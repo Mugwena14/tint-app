@@ -12,6 +12,7 @@ const Process = () => {
 
     return (
         <section 
+            id="process"
             className="w-full py-20 text-white relative overflow-hidden bg-cover bg-center"
             style={{ backgroundImage: "url('/images/background.jpeg')" }}
         >

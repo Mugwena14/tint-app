@@ -1,10 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react';
 import { motion } from "framer-motion";
-import { ArrowRight, Instagram, Twitter, Facebook } from "lucide-react";
+import { ArrowRight, Instagram } from "lucide-react";
+import { FaTiktok } from "react-icons/fa";
+import BookingModal from './BookingModal.jsx';
 
 const HeroSection = () => {
+  const [bookingOpen, setBookingOpen] = useState(false);
+
   return (
     <section
+      id="home"
       className="w-full pt-32 md:pt-32 pb-8 overflow-hidden relative"
       style={{
         backgroundImage: `url('https://res.cloudinary.com/dkmzveqce/image/upload/v1763624731/ChatGPT_Image_Nov_20_2025_09_38_31_AM_unlcuw.png')`,
@@ -15,8 +20,6 @@ const HeroSection = () => {
       {/* OVERLAY */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute inset-0 bg-black/60"></div>
-
-        {/* Gradient removed on small screens */}
         <div
           className="absolute inset-y-0 right-0 w-2/5 hidden md:block"
           style={{
@@ -39,15 +42,11 @@ const HeroSection = () => {
         >
           <div className="space-y-4 -mt-2 md:-mt-10">
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold leading-tight text-white">
-
               <span className="relative inline-block">
-                {/* Blue line hidden on mobile */}
                 <span className="absolute hidden md:block left-0 top-0 h-[4px] w-20 bg-[#0390fc] rounded-sm -translate-y-8"></span>
                 Tintish Window Tinting
               </span>
-
               <br />
-
               <span className="text-gray-200 text-lg sm:text-xl md:text-2xl">
                 Precision. Privacy. Comfort.
               </span>
@@ -64,9 +63,12 @@ const HeroSection = () => {
             </p>
           </div>
 
-          {/* BUTTON */}
-          <button className="group relative inline-flex items-center gap-2 overflow-hidden w-fit mx-auto md:mx-0">
-            <span className="absolute inset-0 bg-yellow-600 scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100"></span>
+          {/* DESKTOP BUTTON – Scroll to Services */}
+            <a
+              href="#services"
+              className="hidden md:inline-flex group relative items-center gap-2 overflow-hidden w-fit mx-auto md:mx-0"
+            >
+            <span className="absolute inset-0 bg-[#0390fc] scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100"></span>
             <span className="relative z-10 px-4 py-3 bg-[#0390fc] text-white transition-colors duration-300 group-hover:bg-transparent text-sm sm:text-base">
               Explore
             </span>
@@ -77,13 +79,33 @@ const HeroSection = () => {
               size={18}
               className="relative z-10 text-[#0390fc] group-hover:text-white transition-colors duration-300"
             />
+          </a>
+
+          {/* MOBILE BUTTON – Book Service */}
+          <button
+            onClick={() => setBookingOpen(true)}
+            className="w-full md:hidden mt-4 px-6 py-3 bg-[#0390fc] text-white font-semibold rounded-lg shadow hover:bg-[#0554e8] transition"
+          >
+            Book Service
           </button>
 
           {/* ICONS */}
           <div className="flex items-center justify-center md:justify-start gap-4 text-[#0390fc] pt-2">
-            <Instagram size={20} className="cursor-pointer" />
-            <Facebook size={20} className="cursor-pointer" />
-            <Twitter size={20} className="cursor-pointer" />
+            <a
+              href="https://instagram.com/tint.ish/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Instagram size={20} className="cursor-pointer hover:text-black transition" />
+            </a>
+
+            <a
+              href="https://www.tiktok.com/@tint.ish"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaTiktok size={20} className="cursor-pointer hover:text-black transition" />
+            </a>
           </div>
         </motion.div>
 
@@ -104,6 +126,13 @@ const HeroSection = () => {
         </motion.div>
 
       </div>
+
+      {/* BOOKING MODAL */}
+      <BookingModal 
+        open={bookingOpen} 
+        onClose={() => setBookingOpen(false)} 
+        size="sm"
+      />
     </section>
   );
 };

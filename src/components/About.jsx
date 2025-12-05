@@ -21,7 +21,7 @@ const About = () => {
 
   return (
     <>
-      <section className="w-full bg-white -mt-20 py-20 px-6 md:px-12 lg:px-24">
+      <section id="about" className="w-full bg-white -mt-20 py-20 px-6 md:px-12 lg:px-24">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
             <h2 className="text-2xl font-semibold text-[#0390fc] mb-4 tracking-wide">
@@ -44,13 +44,13 @@ const About = () => {
                 LEARN MORE
               </button>
 
-              <button className="border border-[#0390fc] text-[#0390fc] px-6 py-3 rounded flex items-center gap-2 hover:bg-[#0390fc] hover:text-white transition">
-                Watch Video <ArrowRight size={16} />
-              </button>
+              <a href="https://www.tiktok.com/@tint.ish" className="border border-[#0390fc] text-[#0390fc] px-6 py-3 rounded flex items-center gap-2 hover:bg-[#0390fc] hover:text-white transition">
+                Watch Videos <ArrowRight size={16} />
+              </a>
             </div>
           </div>
 
-          <div className="grid grid-cols-2 gap-6">
+          <div className="hidden md:grid grid-cols-2 gap-6">
             {stats.map((item, i) => (
               <div
                 key={i}
@@ -63,29 +63,32 @@ const About = () => {
           </div>
         </div>
 
-        <div className="max-w-7xl mx-auto mt-20">
-          <p className="text-gray-700 mb-6 text-lg font-semibold">
-            We provide different car window tint percentages to suit your needs.
-          </p>
+          <div className="max-w-7xl mx-auto mt-20 px-4 sm:px-6 lg:px-8">
+            <p className="text-gray-700 mb-8 text-lg sm:text-xl font-semibold text-center md:text-left">
+              We provide different car window tint percentages to suit your needs.
+            </p>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {tintCards.map((card, index) => (
-              <div
-                key={index}
-                className="bg-white shadow-sm rounded-lg p-4 border-[#0390fc] hover:shadow-lg transition cursor-pointer"
-              >
-                <img
-                  src={card.img}
-                  alt={card.label}
-                  className="w-full h-40 object-cover rounded"
-                />
-                <p className="text-center mt-3 font-medium text-gray-700">
-                  {card.label}
-                </p>
-              </div>
-            ))}
+            <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+              {tintCards.map((card, index) => (
+                <div
+                  key={index}
+                  className="bg-white shadow-sm rounded-lg p-4 border-[#0390fc] hover:shadow-lg transition cursor-pointer flex flex-col"
+                >
+                  <div className="w-full h-48 sm:h-52 md:h-56 lg:h-60 rounded overflow-hidden">
+                    <img
+                      src={card.img}
+                      alt={card.label}
+                      className="w-full h-full object-contain"
+                    />
+                  </div>
+                  <p className="text-center mt-3 font-medium text-gray-700 text-sm sm:text-base">
+                    {card.label}
+                  </p>
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
+
       </section>
 
       <LearnMoreModal open={open} onClose={() => setOpen(false)} />

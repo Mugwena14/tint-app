@@ -4,7 +4,7 @@ import { FaTiktok, FaWhatsapp } from "react-icons/fa";
 
 const Footer = () => {
     return (
-        <footer className="w-full bg-black text-gray-300 py-8">
+        <footer id="contact" className="w-full bg-black text-gray-300 py-8">
             <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-12 relative">
 
                 {/* LOGO + DESCRIPTION */}

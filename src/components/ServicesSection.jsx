@@ -16,6 +16,7 @@ const ServicesSection = () => {
 
   return (
     <section
+      id="services"
       className="w-full -mt-14 bg-cover bg-center py-20"
       style={{
         backgroundImage:
@@ -24,7 +25,7 @@ const ServicesSection = () => {
     >
       <div className="max-w-6xl mx-auto px-6 text-center text-white drop-shadow-[0_0_8px_rgba(0,0,0,0.4)]">
         <p className="text-sm text-white font-semibold tracking-wide uppercase mb-2">Our Services</p>
-        <h2 className="text-2xl md:text-4xl text-gray-700 font-extrabold leading-tight">
+        <h2 className="hidden md:block text-2xl md:text-4xl text-gray-700 font-extrabold leading-tight">
           We’re providing quality Tinting <br /> & Fixing Services
         </h2>
 
@@ -33,7 +34,7 @@ const ServicesSection = () => {
           {/* ------ Car Tinting ------ */}
           <div className="bg-white rounded-2xl shadow-lg overflow-hidden p-6 text-gray-900">
             <img
-              src="https://res.cloudinary.com/dkmzveqce/image/upload/v1764190433/7bf4c51c-5229-47c6-844e-981d90c3f14d_h1wesz.jpg"
+              src="https://res.cloudinary.com/dkmzveqce/image/upload/v1763558762/2888f523-e7a4-43d5-b1de-ee6024e41c5f_twnldd.jpg"
               alt="car tinting"
               className="w-full h-48 object-cover rounded-sm"
             />

@@ -1,19 +1,30 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowRight, Instagram, Twitter, Facebook, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import BookingModal from "./BookingModal.jsx";
 
 const NavBar = () => {
   const [open, setOpen] = useState(false);
   const [bookingOpen, setBookingOpen] = useState(false);
 
+  // Labels + matching IDs
   const links = [
-    "Home",
-    "Services",
-    "Process",
-    "Reviews",
-    "Contact Us",
+    { label: "Home", id: "home" },
+    { label: "About", id: "about" },
+    { label: "Services", id: "services" },
+    { label: "Our Work", id: "work" },
+    { label: "Process", id: "process" },
+    { label: "Reviews", id: "reviews" },
+    { label: "Contact Us", id: "contact" },
   ];
+
+  // Smooth scroll function
+  const scrollToSection = (id) => {
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
 
   return (
     <>
@@ -33,10 +44,11 @@ const NavBar = () => {
           <div className="hidden md:flex items-center gap-8 text-gray-700">
             {links.map((link) => (
               <button
-                key={link}
+                key={link.id}
+                onClick={() => scrollToSection(link.id)}
                 className="hover:text-[#0390fc] text-sm transition"
               >
-                {link}
+                {link.label}
               </button>
             ))}
           </div>
@@ -99,11 +111,14 @@ const NavBar = () => {
                   <div className="flex flex-col gap-4 text-gray-700">
                     {links.map((link) => (
                       <button
-                        key={link}
+                        key={link.id}
+                        onClick={() => {
+                          setOpen(false);
+                          scrollToSection(link.id);
+                        }}
                         className="text-left text-sm hover:text-[#0390fc] transition"
-                        onClick={() => setOpen(false)}
                       >
-                        {link}
+                        {link.label}
                       </button>
                     ))}
                   </div>
@@ -126,7 +141,7 @@ const NavBar = () => {
         </AnimatePresence>
       </nav>
 
-      {/* Booking Modal with reduced size */}
+      {/* Booking Modal */}
       <BookingModal 
         open={bookingOpen} 
         onClose={() => setBookingOpen(false)} 
