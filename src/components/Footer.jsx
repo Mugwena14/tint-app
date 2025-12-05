@@ -4,7 +4,7 @@ import { FaTiktok, FaWhatsapp } from "react-icons/fa";
 
 const Footer = () => {
     return (
-        <footer className="w-full bg-[#0d141f] text-gray-300 py-8">
+        <footer className="w-full bg-black text-gray-300 py-8">
             <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-12 relative">
 
                 {/* LOGO + DESCRIPTION */}
@@ -13,9 +13,9 @@ const Footer = () => {
                     {/* Logo + Title */}
                     <div className="flex flex-col items-left mb-3">
                         <img 
-                            src="https://res.cloudinary.com/dkmzveqce/image/upload/v1763680875/ChatGPT_Image_Nov_21_2025_01_18_38_AM_co1say.png" 
+                            src="https://res.cloudinary.com/dkmzveqce/image/upload/v1764938350/ChatGPT_Image_Dec_5_2025_02_37_49_PM_bluzkq.png" 
                             alt="Tintish Logo"
-                            className="w-14 h-14 object-contain"
+                            className="w-14 h-14"
                         />
                     </div>
 
