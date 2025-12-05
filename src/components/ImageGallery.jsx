@@ -43,11 +43,15 @@ const ImageGallery = () => {
       "https://res.cloudinary.com/dkmzveqce/image/upload/v1763562016/99269d91-e1b8-4e39-9868-a4173f394457_t0mb03.jpg",
       "https://res.cloudinary.com/dkmzveqce/image/upload/v1763561994/e538e3a8-1c63-46b7-9c04-2ca476d86629_dzcyyd.jpg",
       "https://res.cloudinary.com/dkmzveqce/image/upload/v1763561988/5cc2e3f0-d630-45fa-82a8-7f7acc1616dc_ak3rgn.jpg",
-      "https://res.cloudinary.com/dkmzveqce/image/upload/v1763561981/707f59ab-0bd-45f0-85d8-e849b3e1cf35_csffuv.jpg",
-      "https://res.cloudinary.com/dkmzveqce/image/upload/v1763561964/1bb8fc09-4d51-44d6-9792-3c60ad084728_nzxamm.jpg",
+      "https://res.cloudinary.com/dkmzveqce/image/upload/v1764972238/image4_2_t8v1am.jpg",
+      "https://res.cloudinary.com/dkmzveqce/image/upload/v1764972238/image3_3_rzyz4b.jpg",
       "https://res.cloudinary.com/dkmzveqce/image/upload/v1763561961/d656f1cd-2b7b-4f67-bbfd-37146d24ec46_jtjjsm.jpg",
       "https://res.cloudinary.com/dkmzveqce/image/upload/v1763561960/5e731647-c47e-43e1-8b6d-19ffb0f9a077_z26yev.jpg",
-      "https://res.cloudinary.com/dkmzveqce/image/upload/v1763561956/9d11b141-24ef-4a87-a591-b857e438b109_l1wln0.jpg"
+      "https://res.cloudinary.com/dkmzveqce/image/upload/v1763561956/9d11b141-24ef-4a87-a591-b857e438b109_l1wln0.jpg",
+      "https://res.cloudinary.com/dkmzveqce/image/upload/v1764972295/image0_4_xnqw6i.jpg",
+      "https://res.cloudinary.com/dkmzveqce/image/upload/v1764972242/image2_3_cruarc.jpg",
+      "https://res.cloudinary.com/dkmzveqce/image/upload/v1764972237/image5_1_j8uvvf.jpg",
+      "https://res.cloudinary.com/dkmzveqce/image/upload/v1764972287/image1_4_rkcwh0.jpg",
     ],
   };
 
@@ -105,9 +109,9 @@ const ImageGallery = () => {
             OUR WORK
           <span className="block h-[2px] w-10 bg-[#0390fc]/50 mt-1 mx-auto"></span>
           </p>
-        <h2 className="hidden md:block text-2xl md:text-3xl text-gray-700 font-extrabold leading-tight">
+        {/* <h2 className="hidden md:block text-2xl md:text-3xl text-gray-700 font-extrabold leading-tight">
           A curated collection of our window <br /> tinting projects.
-        </h2>
+        </h2> */}
 
           {/* <p className="text-gray-500 text-sm md:text-[15px] max-w-md mx-auto mt-3">
           A curated collection of our window tinting projects — showcasing premium

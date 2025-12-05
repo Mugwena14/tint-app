@@ -24,10 +24,13 @@ const ServicesSection = () => {
       }}
     >
       <div className="max-w-6xl mx-auto px-6 text-center text-white drop-shadow-[0_0_8px_rgba(0,0,0,0.4)]">
-        <p className="text-sm text-white font-semibold tracking-wide uppercase mb-2">Our Services</p>
-        <h2 className="hidden md:block text-2xl md:text-4xl text-gray-700 font-extrabold leading-tight">
+        <p className="text-sm text-white font-semibold tracking-wide uppercase mb-2">
+          Our Services
+          <span className="block h-[4px] w-15 bg-white mt-2 mx-auto"></span>  
+        </p>
+        {/* <h2 className="hidden md:block text-2xl md:text-4xl text-gray-700 font-extrabold leading-tight">
           We’re providing quality Tinting <br /> & Fixing Services
-        </h2>
+        </h2> */}
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
           

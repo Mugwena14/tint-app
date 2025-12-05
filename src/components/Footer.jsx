@@ -68,7 +68,7 @@ const Footer = () => {
                     </h2>
 
                     <h3 className="text-basic font-semibold text-white mb-4 relative z-10">
-                        Book Now
+                        Reach Out
                     </h3>
 
                     <div className="flex items-center gap-4 relative z-10">
@@ -94,7 +94,7 @@ const Footer = () => {
 
                         {/* TIKTOK CTA */}
                         <a 
-                            href="https://www.tiktok.com"
+                            href="https://www.tiktok.com/@tint.ish"
                             target="_blank"
                             className="w-10 h-10 rounded-full flex items-center justify-center 
                                        bg-white/10 hover:bg-white/20 transition"
