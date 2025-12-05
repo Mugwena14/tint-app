@@ -193,7 +193,7 @@ const Testimonials = () => {
                   onChange={(e) =>
                     setForm({ ...form, rating: Number(e.target.value) })
                   }
-                  className="w-full p-2 mt-1 bg-black/30 border-2 border-[#c9a24d]/40 focus:border-[#c9a24d] rounded text-white outline-none"
+                  className="w-full p-2 mt-1 bg-black/30 border-2 border-[#0390fc]/40 focus:border-[#0390fc] rounded text-white outline-none"
                 >
                   {[5, 4, 3, 2, 1].map((n) => (
                     <option key={n} value={n}>
@@ -215,14 +215,14 @@ const Testimonials = () => {
                   onChange={(e) =>
                     setForm({ ...form, message: e.target.value })
                   }
-                  className="w-full p-2 mt-1 bg-black/30 border-2 border-[#c9a24d]/40 focus:border-[#c9a24d] rounded text-white outline-none"
+                  className="w-full p-2 mt-1 bg-black/30 border-2 border-[#0390fc]/40 focus:border-[#0390fc] rounded text-white outline-none"
                 ></textarea>
               </div>
 
               <button
                 type="submit"
                 disabled={sending}
-                className="w-full py-2 bg-[#c9a24d] text-black rounded-lg font-medium hover:bg-[#b18e3f] transition"
+                className="w-full py-2 bg-[#0390fc]/40 text-black rounded-lg font-medium hover:bg-[#0390fc] transition"
               >
                 {sending ? (
                   <span className="flex items-center justify-center gap-2">
@@ -284,7 +284,7 @@ const Input = ({ label, ...props }) => (
     <label className="text-sm text-gray-300">{label}</label>
     <input
       {...props}
-      className="w-full p-2 mt-1 bg-black/30 border-2 border-[#c9a24d]/40 focus:border-[#c9a24d] rounded text-white outline-none placeholder-gray-400"
+      className="w-full p-2 mt-1 bg-black/30 border-2 border-[#0390fc]/40 focus:border-[#0390fc] rounded text-white outline-none placeholder-gray-400"
     />
   </div>
 );

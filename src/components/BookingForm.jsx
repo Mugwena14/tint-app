@@ -179,7 +179,7 @@ const BookingForm = () => {
         <button
           type="submit"
           disabled={loading}
-          className="w-full bg-black text-white p-3 rounded-xl text-lg font-medium hover:bg-[#c9a24d] hover:text-black transition-all duration-300"
+          className="w-full bg-black text-white p-3 rounded-xl text-lg font-medium hover:bg-[#0390fc] hover:text-black transition-all duration-300"
         >
           {loading ? "Sending..." : "Submit Booking"}
         </button>

@@ -34,7 +34,7 @@ const NavBar = () => {
             {links.map((link) => (
               <button
                 key={link}
-                className="hover:text-[#c9a24d] text-sm transition"
+                className="hover:text-[#0390fc] text-sm transition"
               >
                 {link}
               </button>
@@ -44,7 +44,7 @@ const NavBar = () => {
           {/* Desktop CTA */}
           <button
             onClick={() => setBookingOpen(true)}
-            className="hidden md:block text-sm bg-black text-white px-4 py-2 rounded-md hover:bg-[#c9a24d] hover:text-black transition"
+            className="hidden md:block text-sm bg-black text-white px-4 py-2 rounded-md hover:bg-[#0390fc] hover:text-black transition"
           >
             Book Service Now
           </button>
@@ -100,7 +100,7 @@ const NavBar = () => {
                     {links.map((link) => (
                       <button
                         key={link}
-                        className="text-left text-sm hover:text-[#c9a24d] transition"
+                        className="text-left text-sm hover:text-[#0390fc] transition"
                         onClick={() => setOpen(false)}
                       >
                         {link}
@@ -114,7 +114,7 @@ const NavBar = () => {
                       setOpen(false);
                       setBookingOpen(true);
                     }}
-                    className="mt-auto text-center text-sm bg-black text-white px-4 py-2 rounded-md hover:bg-[#c9a24d] hover:text-black transition"
+                    className="mt-auto text-center text-sm bg-black text-white px-4 py-2 rounded-md hover:bg-[#0390fc] hover:text-black transition"
                   >
                     Book Service Now
                   </button>

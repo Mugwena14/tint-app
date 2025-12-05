@@ -153,7 +153,7 @@ const ImageGallery = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.3 }}
-            className="relative aspect-square w-[160px] md:w-[240px] overflow-hidden cursor-pointer rounded-lg"
+            className="relative aspect-square w-[160px] md:w-[240px] overflow-hidden cursor-pointer"
             onClick={() => openImage(index)}
           >
             <motion.img
@@ -191,7 +191,7 @@ const ImageGallery = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.3 }}
             onClick={() => setShowAll(!showAll)}
-            className="px-5 py-1 bg-gray-800 text-white rounded-lg hover:bg-blue-700 transition cursor-pointer"
+            className="px-5 py-1 bg-gray-800 text-white hover:bg-blue-700 transition cursor-pointer"
           >
             {showAll ? "View Less" : "View More"}
           </motion.button>

@@ -26,23 +26,62 @@ const LearnMoreModal = ({ open, onClose }) => {
               <X size={20} />
             </button>
 
-            <h2 className="text-2xl font-semibold text-[#c9a24d] mb-4">
+            <h2 className="text-2xl font-semibold text-[#0390fc] mb-4">
               More About Our Services
             </h2>
 
-            <p className="text-gray-600 leading-relaxed">
+            <p className="text-gray-600 leading-relaxed mb-6">
               We provide professional tinting services designed to enhance
               comfort, privacy, and aesthetics. Our team specializes in automotive,
               residential, and commercial tinting—reducing heat, blocking harmful UV
               rays, and improving energy efficiency.
-
               <br /><br />
-
               Whether you want cooler car interiors, improved home insulation, or 
               privacy for your office space, we deliver clean, smooth, high-quality
               finishes using durable films that stand the test of time. Our mission
               is to bring comfort and style together, tailored to your needs.
             </p>
+
+            {/* Tint Levels Comparison Grid */}
+            <div>
+              <h3 className="text-lg font-semibold text-gray-800 mb-3">
+                Tint Levels We Offer:
+              </h3>
+
+              <div className="grid grid-cols-2 gap-4">
+                {/* 05% */}
+                <div className="p-4 border rounded-lg shadow-sm bg-gray-50">
+                  <h4 className="font-bold text-[#0390fc] text-lg">05%</h4>
+                  <p className="text-gray-600 text-sm mt-1">
+                    Limo dark — maximum privacy.
+                  </p>
+                </div>
+
+                {/* 20% */}
+                <div className="p-4 border rounded-lg shadow-sm bg-gray-50">
+                  <h4 className="font-bold text-[#0390fc] text-lg">20%</h4>
+                  <p className="text-gray-600 text-sm mt-1">
+                    Deep tint — stylish with good visibility.
+                  </p>
+                </div>
+
+                {/* 35% */}
+                <div className="p-4 border rounded-lg shadow-sm bg-gray-50">
+                  <h4 className="font-bold text-[#0390fc] text-lg">35%</h4>
+                  <p className="text-gray-600 text-sm mt-1">
+                    Factory-style — clean OEM look.
+                  </p>
+                </div>
+
+                {/* 50% */}
+                <div className="p-4 border rounded-lg shadow-sm bg-gray-50">
+                  <h4 className="font-bold text-[#0390fc] text-lg">50%</h4>
+                  <p className="text-gray-600 text-sm mt-1">
+                    Light shade — glare reduction.
+                  </p>
+                </div>
+              </div>
+            </div>
           </motion.div>
         </motion.div>
       )}

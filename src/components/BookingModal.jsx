@@ -65,7 +65,7 @@ const BookingModal = ({ open, onClose }) => {
         >
           <button
             onClick={onClose}
-            className="absolute top-3 right-3 text-black hover:text-[#c9a24d]"
+            className="absolute top-3 right-3 text-black hover:text-[#0390fc]"
           >
             <X size={22} />
           </button>
@@ -198,7 +198,7 @@ const BookingModal = ({ open, onClose }) => {
             <button
               type="submit"
               disabled={loading}
-              className="w-full bg-black text-white p-2.5 rounded-lg text-sm font-medium hover:bg-[#c9a24d] hover:text-black transition"
+              className="w-full bg-black text-white p-2.5 rounded-lg text-sm font-medium hover:bg-[#0390fc] hover:text-black transition"
             >
               {loading ? "Sending..." : "Submit Booking"}
             </button>
