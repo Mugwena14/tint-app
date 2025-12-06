@@ -164,7 +164,7 @@ const BookingModal = ({ open, onClose }) => {
                 <textarea
                   name="message"
                   rows="3"
-                  placeholder="Message..."
+                  placeholder="Explain what you want..."
                   required
                   className="p-2 border rounded-lg text-sm resize-none w-full"
                 />
@@ -172,7 +172,7 @@ const BookingModal = ({ open, onClose }) => {
 
               <div>
                 <label className="text-xs font-medium text-gray-700">
-                  Image Upload (optional)
+                  Image Upload (optional. Max-3)
                 </label>
                 <input
                   type="file"

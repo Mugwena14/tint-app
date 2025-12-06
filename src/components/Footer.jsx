@@ -1,6 +1,6 @@
 import React from "react";
 import { Mail, Phone, MapPin } from "lucide-react";
-import { FaTiktok, FaWhatsapp } from "react-icons/fa";
+import { FaTiktok, FaWhatsapp, FaInstagram  } from "react-icons/fa";
 
 const Footer = () => {
     return (
@@ -100,6 +100,16 @@ const Footer = () => {
                                        bg-white/10 hover:bg-white/20 transition"
                         >
                             <FaTiktok size={20} />
+                        </a>
+
+                        {/* INSTAGRAM CTA */}
+                        <a 
+                            href="https://www.instagram.com/tint.ish"
+                            target="_blank"
+                            className="w-10 h-10 rounded-full flex items-center justify-center 
+                                       bg-pink-500/20 hover:bg-pink-500/40 transition"
+                        >
+                            <FaInstagram size={20} />
                         </a>
                     </div>
                 </div>
