@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X } from "lucide-react";
+import { API_BASE_URL } from "../config.js";
 
 const BookingModal = ({ open, onClose }) => {
   const [images, setImages] = useState([]);
@@ -25,7 +26,7 @@ const BookingModal = ({ open, onClose }) => {
     images.forEach((img) => formData.append("images", img));
 
     try {
-      const res = await fetch("http://localhost:5000/api/book", {
+      const res = await fetch(`${API_BASE_URL}/book`, {
         method: "POST",
         body: formData,
       });

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { X } from "lucide-react";
 import Beams from "./Beams";
 import FAQ from "./FAQ.jsx";
+import { API_BASE_URL } from "../config.js";
 
 const Testimonials = () => {
   const [reviews, setReviews] = useState([]);
@@ -20,7 +21,7 @@ const Testimonials = () => {
   // ---------------------------------------------------
   const fetchReviews = async () => {
     try {
-      const res = await fetch("http://localhost:5000/api/reviews");
+      const res = await fetch(`${API_BASE_URL}/reviews`);
       const data = await res.json();
       setReviews(data.reviews || data);
     } catch (err) {
@@ -40,7 +41,7 @@ const Testimonials = () => {
   setSending(true);
 
   try {
-    const res = await fetch("http://localhost:5000/api/reviews", {
+    const res = await fetch(`${API_BASE_URL}/reviews`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(form),

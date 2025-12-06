@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { API_BASE_URL } from "../config.js";
 
 const BookingForm = () => {
   const [images, setImages] = useState([]);
@@ -26,7 +27,7 @@ const BookingForm = () => {
     });
 
     try {
-      const res = await fetch("http://localhost:5000/api/book", {
+      const res = await fetch(`${API_BASE_URL}/book`, {
         method: "POST",
         body: formData,
       });
