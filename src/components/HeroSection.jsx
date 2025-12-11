@@ -12,12 +12,13 @@ const HeroSection = () => {
       id="home"
       className="w-full pt-32 md:pt-32 pb-8 overflow-hidden relative"
       style={{
-        backgroundImage: `url('https://res.cloudinary.com/dkmzveqce/image/upload/v1763624731/ChatGPT_Image_Nov_20_2025_09_38_31_AM_unlcuw.png')`,
+        backgroundImage: `url('https://res.cloudinary.com/dkmzveqce/image/upload/v1765488378/ChatGPT_Image_Dec_11_2025_11_24_29_PM_nux1jn.png')`,
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
     >
-      {/* OVERLAY */}
+
+      {/* DARK OVERLAY */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute inset-0 bg-black/60"></div>
         <div
@@ -30,10 +31,19 @@ const HeroSection = () => {
         ></div>
       </div>
 
-      {/* CONTENT */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 md:px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+      {/* MOBILE CAR BACKGROUND */}
+      <div className="absolute inset-0 md:hidden z-[1] flex items-center justify-center">
+        <img
+          src="https://res.cloudinary.com/dkmzveqce/image/upload/v1764923859/car_jrpf1a.png"
+          alt="Tinted Car Mobile"
+          className="w-full h-full object-contain opacity-30"
+        />
+      </div>
 
-        {/* LEFT SIDE */}
+      {/* CONTENT */}
+      <div className="relative z-10 md:z-20 max-w-7xl mx-auto px-4 md:px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+
+        {/* LEFT TEXT AREA */}
         <motion.div
           initial={{ opacity: 0, x: -40 }}
           animate={{ opacity: 1, x: 0 }}
@@ -63,11 +73,11 @@ const HeroSection = () => {
             </p>
           </div>
 
-          {/* DESKTOP BUTTON – Scroll to Services */}
-            <a
-              href="#services"
-              className="hidden md:inline-flex group relative items-center gap-2 overflow-hidden w-fit mx-auto md:mx-0"
-            >
+          {/* DESKTOP BUTTON */}
+          <a
+            href="#services"
+            className="hidden md:inline-flex group relative items-center gap-2 overflow-hidden w-fit mx-auto md:mx-0"
+          >
             <span className="absolute inset-0 bg-[#0390fc] scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100"></span>
             <span className="relative z-10 px-4 py-3 bg-[#0390fc] text-white transition-colors duration-300 group-hover:bg-transparent text-sm sm:text-base">
               Explore
@@ -81,7 +91,7 @@ const HeroSection = () => {
             />
           </a>
 
-          {/* MOBILE BUTTON – Book Service */}
+          {/* MOBILE BOOK SERVICE BUTTON */}
           <button
             onClick={() => setBookingOpen(true)}
             className="w-full md:hidden mt-4 px-6 py-3 bg-[#0390fc] text-white font-semibold rounded-lg shadow hover:bg-[#0554e8] transition"
@@ -109,7 +119,7 @@ const HeroSection = () => {
           </div>
         </motion.div>
 
-        {/* RIGHT SIDE – HIDDEN ON SMALL */}
+        {/* RIGHT IMAGE (DESKTOP ONLY) */}
         <motion.div
           initial={{ opacity: 0, x: 40 }}
           animate={{ opacity: 1, x: 0 }}
@@ -138,6 +148,7 @@ const HeroSection = () => {
 };
 
 export default HeroSection;
+
 
 
 

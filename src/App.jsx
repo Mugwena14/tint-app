@@ -14,23 +14,33 @@ import FAQ from './components/FAQ.jsx';
 import Footer from './components/Footer.jsx';
 
 function App() {
-return (
-<div className="w-full overflow-hidden">
-    <NavBar />
-    <HeroSection />
-    <Loop />
-    <About />
-    <ServicesSection />
-    <ImageGallery />
-    <Process />
-    <Loop />
-    {/* <PricingSection /> */}
-    {/* <WhyChooseUs /> */}
-    <Testimonials />
-    {/* <TeamReview /> */}
-    <Footer />
-</div>
-);
+  return (
+    <div className="w-full overflow-hidden">
+      <NavBar />
+      <HeroSection />
+      <Loop />
+      <About />
+      <ServicesSection />
+      <ImageGallery />
+      <Process />
+      <Loop />
+      {/* <PricingSection /> */}
+      {/* <WhyChooseUs /> */}
+      <Testimonials />
+      {/* <TeamReview /> */}
+      <Footer />
+
+      {/* Floating WhatsApp Button */}
+      <a
+        href="https://wa.me/27688287061"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed bottom-6 right-6 z-50 bg-green-500 text-white font-semibold px-6 py-3 rounded-full shadow-lg flex items-center gap-2"
+      >
+        <span>💬</span> WhatsApp Us
+      </a>
+    </div>
+  );
 }
 
 export default App;

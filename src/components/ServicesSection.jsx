@@ -18,15 +18,15 @@ const ServicesSection = () => {
     <section
       id="services"
       className="w-full -mt-14 bg-cover bg-center py-20"
-      style={{
-        backgroundImage:
-          "url('https://res.cloudinary.com/dkmzveqce/image/upload/v1764926621/ChatGPT_Image_Dec_5_2025_11_20_07_AM_m1qvsg.png')",
-      }}
+      // style={{
+      //   backgroundImage:
+      //     "url('https://res.cloudinary.com/dkmzveqce/image/upload/v1764926621/ChatGPT_Image_Dec_5_2025_11_20_07_AM_m1qvsg.png')",
+      // }}
     >
       <div className="max-w-6xl mx-auto px-6 text-center text-white drop-shadow-[0_0_8px_rgba(0,0,0,0.4)]">
-        <p className="text-sm text-white font-semibold tracking-wide uppercase mb-2">
+        <p className="text-sm text-[#0390fc] font-semibold tracking-wide uppercase mb-2">
           Our Services
-          <span className="block h-[4px] w-15 bg-white mt-2 mx-auto"></span>  
+          <span className="block text-[#0390fc] h-[4px] w-15 bg-white mt-2 mx-auto"></span>  
         </p>
         {/* <h2 className="hidden md:block text-2xl md:text-4xl text-gray-700 font-extrabold leading-tight">
           We’re providing quality Tinting <br /> & Fixing Services
