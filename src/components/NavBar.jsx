@@ -84,7 +84,7 @@ const NavBar = () => {
             >
               {/* Backdrop */}
               <motion.div
-                className="md:hidden fixed inset-0 bg-black/40 backdrop-blur-sm z-50 flex justify-end"
+                className="md:hidden fixed inset-0 bg-black/40 backdrop-blur-sm z-[9999] flex justify-end"
                 onClick={() => setOpen(false)}
                 aria-hidden={false}
               >
@@ -96,7 +96,7 @@ const NavBar = () => {
                   animate={{ x: 0 }}
                   exit={{ x: 300 }}
                   transition={{ type: 'tween', duration: 0.25 }}
-                  className="w-64 h-full bg-white shadow-xl p-6 flex flex-col"
+                  className="w-64 h-full bg-white shadow-xl p-6 flex flex-col z-[10000]"
                   onClick={(e) => e.stopPropagation()}
                   role="dialog"
                   aria-modal="true"
