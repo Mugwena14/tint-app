@@ -129,7 +129,7 @@ const NavBar = () => {
                       setOpen(false);
                       setBookingOpen(true);
                     }}
-                    className="mt-auto text-center text-sm bg-black text-white px-4 py-2 rounded-md hover:bg-[#0390fc] hover:text-black transition"
+                    className="mt-auto mb-15 text-center text-sm bg-black text-white px-4 py-2 rounded-md hover:bg-[#0390fc] hover:text-black transition"
                   >
                     Book Service Now
                   </button>
