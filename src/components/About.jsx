@@ -65,7 +65,7 @@ const About = () => {
 
           <div className="max-w-7xl mx-auto mt-20 px-4 sm:px-6 lg:px-8">
             <p className="text-gray-700 mb-8 text-lg sm:text-xl font-semibold text-center md:text-left">
-              We provide different car window tint percentages to suit your needs.
+              We provide different tint percentages with smash & grab to suit your needs.
             </p>
 
             <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">

@@ -51,13 +51,13 @@ const HeroSection = () => {
           className="flex flex-col gap-6 text-center md:text-left"
         >
           <div className="space-y-4 -mt-2 md:-mt-10">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold leading-tight text-white">
+            <h1 className="text-3xl sm:text-4xl md:text-3.8xl font-semibold leading-tight text-white">
               <span className="relative inline-block">
                 <span className="absolute hidden md:block left-0 top-0 h-[4px] w-20 bg-[#0390fc] rounded-sm -translate-y-8"></span>
-                Tintish Window Tinting
+                Tintish Tints, smash & grab
               </span>
               <br />
-              <span className="text-gray-200 text-lg sm:text-xl md:text-2xl">
+              <span className="text-gray-200 text-lg sm:text-xl md:text-1.9xl">
                 Precision. Privacy. Comfort.
               </span>
             </h1>
