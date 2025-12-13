@@ -1,1 +1,1 @@
-export const API_BASE_URL = "https://tintish-backend.onrender.com/api";
+export const API_BASE_URL = "https://tintish-api.onrender.com/api";
