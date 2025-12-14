@@ -101,7 +101,7 @@ const ServicesSection = () => {
           {/* ------ Office Tinting ------ */}
           <div className="bg-white rounded-2xl shadow-lg overflow-hidden p-6 text-gray-900">
             <img
-              src="https://res.cloudinary.com/dkmzveqce/image/upload/v1765488378/ChatGPT_Image_Dec_11_2025_11_24_29_PM_nux1jn.png"
+              src= "https://res.cloudinary.com/dkmzveqce/image/upload/v1763561994/e538e3a8-1c63-46b7-9c04-2ca476d86629_dzcyyd.jpg"
               alt="office tinting"
               className="w-full h-48 object-cover rounded-sm"
             />
