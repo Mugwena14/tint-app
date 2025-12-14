@@ -178,14 +178,6 @@ const Testimonials = () => {
                 }
               />
 
-              <Input
-                label="Role (optional)"
-                placeholder="Eg. Homeowner, Business Owner"
-                value={form.role}
-                onChange={(e) =>
-                  setForm({ ...form, role: e.target.value })
-                }
-              />
 
               <div>
                 <label className="text-sm text-gray-300">Rating</label>
