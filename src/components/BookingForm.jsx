@@ -75,13 +75,15 @@ const BookingForm = () => {
           />
         </div>
 
-        {/* Email */}
+        {/* Phone Number */}
         <div>
-          <label className="block mb-1 font-medium text-black">Email</label>
+          <label className="block mb-1 font-medium text-black">Phone Number</label>
           <input
-            type="email"
-            name="email"
+            type="tel"
+            name="phone"
             required
+            pattern="[0-9]{10,15}" 
+            placeholder="Enter your phone number"
             className="w-full p-3 border rounded-xl focus:ring-2 focus:ring-[#c9a24d]"
           />
         </div>
