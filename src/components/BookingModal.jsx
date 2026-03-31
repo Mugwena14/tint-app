@@ -33,7 +33,7 @@ const BookingModal = ({ open, onClose }) => {
 
       const data = await res.json();
       if (data.success) {
-        setMessage("Booking sent! Check your email.");
+        setMessage("Booking sent! We’ll contact you shortly.");
         e.target.reset();
         setImages([]);
         setPreview([]);
@@ -95,12 +95,13 @@ const BookingModal = ({ open, onClose }) => {
               </div>
 
               <div>
-                <label className="text-xs font-medium text-gray-700">Email</label>
+                <label className="text-xs font-medium text-gray-700">Phone Number</label>
                 <input
-                  type="email"
-                  name="email"
-                  placeholder="Email"
+                  type="tel"
+                  name="phone"
+                  placeholder="e.g. 0812345678"
                   required
+                  pattern="[0-9]{10,15}"
                   className="p-2 border rounded-lg text-sm w-full"
                 />
               </div>
